@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = 'Swiftly'
+  s.name = 'SwiftlyExt'
   s.version = '0.0.1'
   s.license = 'MIT'
   s.summary = 'Extensions for native standard Swift types and classes'
