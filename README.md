@@ -10,7 +10,7 @@ SwiftlyExt is a library that extends certain Swift standard types and classes us
 
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Documentation](https://swiftly.readme.io)
 - [FAQ](#faq)
 - [License](#license)
 
@@ -108,3 +108,13 @@ $ git submodule add https://github.com/khoiln/SwiftlyExt.git
 > The `SwiftlyExt.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
 ---
+
+##FAQ
+
+###What is the purpose of the project?
+
+SwiftlyExt is a collection of useful extensions that we use daily for iOS, and macOS development. It helps us save a ton of time writing the same code over and over again. Hope SwiftyExt will helps you too.
+
+## License
+
+SwiftyExt is released under the MIT license. See LICENSE for details.
