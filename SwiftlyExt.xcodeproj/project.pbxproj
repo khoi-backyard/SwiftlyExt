@@ -21,14 +21,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		7C135F641D99637800994840 /* Swiftly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB10DA31D99621700731EE9 /* Swiftly.framework */; };
+		7C135F641D99637800994840 /* SwiftlyExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB10DA31D99621700731EE9 /* SwiftlyExt.framework */; };
 		7C135F6A1D9963D500994840 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D891D995EF300731EE9 /* ArrayTests.swift */; };
 		7C135F6B1D9963D700994840 /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD99CEC1D901F0300668467 /* IntTests.swift */; };
 		7C135F791D99658600994840 /* Swiftly.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD99CE21D9002F900668467 /* Swiftly.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C135F7A1D99658B00994840 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD99CE41D901C3800668467 /* Int.swift */; };
 		7C135F7B1D99658B00994840 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD99CF71D9020BF00668467 /* Range.swift */; };
 		7C135F7C1D99658B00994840 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D871D99344700731EE9 /* Array.swift */; };
-		7C135F951D99660E00994840 /* Swiftly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C135F711D9964A000994840 /* Swiftly.framework */; };
+		7C135F951D99660E00994840 /* SwiftlyExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C135F711D9964A000994840 /* SwiftlyExt.framework */; };
 		7C135F9B1D99663800994840 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D891D995EF300731EE9 /* ArrayTests.swift */; };
 		7C135F9C1D99663C00994840 /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD99CEC1D901F0300668467 /* IntTests.swift */; };
 		7C14D21B1DA8E4DD00204587 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14D21A1DA8E4DD00204587 /* Date.swift */; };
@@ -51,7 +51,7 @@
 		7CD99CE31D9002FD00668467 /* Swiftly.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD99CE21D9002F900668467 /* Swiftly.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CD99CE51D901C3800668467 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD99CE41D901C3800668467 /* Int.swift */; };
 		7CD99CED1D901F0300668467 /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD99CEC1D901F0300668467 /* IntTests.swift */; };
-		7CD99CEF1D901F0300668467 /* Swiftly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD99CD51D9002E100668467 /* Swiftly.framework */; };
+		7CD99CEF1D901F0300668467 /* SwiftlyExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD99CD51D9002E100668467 /* SwiftlyExt.framework */; };
 		7CD99CF81D9020BF00668467 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD99CF71D9020BF00668467 /* Range.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,21 +80,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7C135F5F1D99637800994840 /* Swiftly tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiftly tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C135F711D9964A000994840 /* Swiftly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C135F901D99660E00994840 /* Swiftly macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiftly macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C135F5F1D99637800994840 /* SwiftlyExt tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftlyExt tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C135F711D9964A000994840 /* SwiftlyExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftlyExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C135F901D99660E00994840 /* SwiftlyExt macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftlyExt macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14D21A1DA8E4DD00204587 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		7C14D21F1DA8E99800204587 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		7CB10D871D99344700731EE9 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7CB10D891D995EF300731EE9 /* ArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		7CB10D8B1D99609A00731EE9 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		7CB10D921D99613C00731EE9 /* Swiftly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CB10DA31D99621700731EE9 /* Swiftly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CD99CD51D9002E100668467 /* Swiftly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB10D921D99613C00731EE9 /* SwiftlyExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftlyExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB10DA31D99621700731EE9 /* SwiftlyExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftlyExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD99CD51D9002E100668467 /* SwiftlyExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftlyExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD99CE11D9002F900668467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD99CE21D9002F900668467 /* Swiftly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swiftly.h; sourceTree = "<group>"; };
 		7CD99CE41D901C3800668467 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		7CD99CEA1D901F0300668467 /* Swiftly iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiftly iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD99CEA1D901F0300668467 /* SwiftlyExt iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftlyExt iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD99CEC1D901F0300668467 /* IntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTests.swift; sourceTree = "<group>"; };
 		7CD99CEE1D901F0300668467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD99CF71D9020BF00668467 /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C135F641D99637800994840 /* Swiftly.framework in Frameworks */,
+				7C135F641D99637800994840 /* SwiftlyExt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C135F951D99660E00994840 /* Swiftly.framework in Frameworks */,
+				7C135F951D99660E00994840 /* SwiftlyExt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD99CEF1D901F0300668467 /* Swiftly.framework in Frameworks */,
+				7CD99CEF1D901F0300668467 /* SwiftlyExt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,13 +178,13 @@
 		7CD99CD61D9002E100668467 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7CD99CD51D9002E100668467 /* Swiftly.framework */,
-				7CD99CEA1D901F0300668467 /* Swiftly iOS Tests.xctest */,
-				7CB10D921D99613C00731EE9 /* Swiftly.framework */,
-				7CB10DA31D99621700731EE9 /* Swiftly.framework */,
-				7C135F5F1D99637800994840 /* Swiftly tvOS Tests.xctest */,
-				7C135F711D9964A000994840 /* Swiftly.framework */,
-				7C135F901D99660E00994840 /* Swiftly macOS Tests.xctest */,
+				7CD99CD51D9002E100668467 /* SwiftlyExt.framework */,
+				7CD99CEA1D901F0300668467 /* SwiftlyExt iOS Tests.xctest */,
+				7CB10D921D99613C00731EE9 /* SwiftlyExt.framework */,
+				7CB10DA31D99621700731EE9 /* SwiftlyExt.framework */,
+				7C135F5F1D99637800994840 /* SwiftlyExt tvOS Tests.xctest */,
+				7C135F711D9964A000994840 /* SwiftlyExt.framework */,
+				7C135F901D99660E00994840 /* SwiftlyExt macOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,9 +250,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7C135F5E1D99637800994840 /* Swiftly tvOS Tests */ = {
+		7C135F5E1D99637800994840 /* SwiftlyExt tvOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C135F671D99637800994840 /* Build configuration list for PBXNativeTarget "Swiftly tvOS Tests" */;
+			buildConfigurationList = 7C135F671D99637800994840 /* Build configuration list for PBXNativeTarget "SwiftlyExt tvOS Tests" */;
 			buildPhases = (
 				7C135F5B1D99637800994840 /* Sources */,
 				7C135F5C1D99637800994840 /* Frameworks */,
@@ -263,14 +263,14 @@
 			dependencies = (
 				7C135F661D99637800994840 /* PBXTargetDependency */,
 			);
-			name = "Swiftly tvOS Tests";
+			name = "SwiftlyExt tvOS Tests";
 			productName = tvostests;
-			productReference = 7C135F5F1D99637800994840 /* Swiftly tvOS Tests.xctest */;
+			productReference = 7C135F5F1D99637800994840 /* SwiftlyExt tvOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7C135F701D9964A000994840 /* Swiftly macOS */ = {
+		7C135F701D9964A000994840 /* SwiftlyExt macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C135F761D9964A000994840 /* Build configuration list for PBXNativeTarget "Swiftly macOS" */;
+			buildConfigurationList = 7C135F761D9964A000994840 /* Build configuration list for PBXNativeTarget "SwiftlyExt macOS" */;
 			buildPhases = (
 				7C135F6C1D9964A000994840 /* Sources */,
 				7C135F6D1D9964A000994840 /* Frameworks */,
@@ -281,14 +281,14 @@
 			);
 			dependencies = (
 			);
-			name = "Swiftly macOS";
+			name = "SwiftlyExt macOS";
 			productName = Swiftlymac;
-			productReference = 7C135F711D9964A000994840 /* Swiftly.framework */;
+			productReference = 7C135F711D9964A000994840 /* SwiftlyExt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7C135F8F1D99660E00994840 /* Swiftly macOS Tests */ = {
+		7C135F8F1D99660E00994840 /* SwiftlyExt macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C135F981D99660E00994840 /* Build configuration list for PBXNativeTarget "Swiftly macOS Tests" */;
+			buildConfigurationList = 7C135F981D99660E00994840 /* Build configuration list for PBXNativeTarget "SwiftlyExt macOS Tests" */;
 			buildPhases = (
 				7C135F8C1D99660E00994840 /* Sources */,
 				7C135F8D1D99660E00994840 /* Frameworks */,
@@ -299,14 +299,14 @@
 			dependencies = (
 				7C135F971D99660E00994840 /* PBXTargetDependency */,
 			);
-			name = "Swiftly macOS Tests";
+			name = "SwiftlyExt macOS Tests";
 			productName = SwiftlyTests;
-			productReference = 7C135F901D99660E00994840 /* Swiftly macOS Tests.xctest */;
+			productReference = 7C135F901D99660E00994840 /* SwiftlyExt macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7CB10D911D99613C00731EE9 /* Swiftly watchOS */ = {
+		7CB10D911D99613C00731EE9 /* SwiftlyExt watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CB10D971D99613C00731EE9 /* Build configuration list for PBXNativeTarget "Swiftly watchOS" */;
+			buildConfigurationList = 7CB10D971D99613C00731EE9 /* Build configuration list for PBXNativeTarget "SwiftlyExt watchOS" */;
 			buildPhases = (
 				7CB10D8D1D99613C00731EE9 /* Sources */,
 				7CB10D8E1D99613C00731EE9 /* Frameworks */,
@@ -317,14 +317,14 @@
 			);
 			dependencies = (
 			);
-			name = "Swiftly watchOS";
+			name = "SwiftlyExt watchOS";
 			productName = "Swiftly-watchOS";
-			productReference = 7CB10D921D99613C00731EE9 /* Swiftly.framework */;
+			productReference = 7CB10D921D99613C00731EE9 /* SwiftlyExt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7CB10DA21D99621700731EE9 /* Swiftly tvOS */ = {
+		7CB10DA21D99621700731EE9 /* SwiftlyExt tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CB10DA81D99621700731EE9 /* Build configuration list for PBXNativeTarget "Swiftly tvOS" */;
+			buildConfigurationList = 7CB10DA81D99621700731EE9 /* Build configuration list for PBXNativeTarget "SwiftlyExt tvOS" */;
 			buildPhases = (
 				7CB10D9E1D99621700731EE9 /* Sources */,
 				7CB10D9F1D99621700731EE9 /* Frameworks */,
@@ -335,14 +335,14 @@
 			);
 			dependencies = (
 			);
-			name = "Swiftly tvOS";
+			name = "SwiftlyExt tvOS";
 			productName = swiftlytv;
-			productReference = 7CB10DA31D99621700731EE9 /* Swiftly.framework */;
+			productReference = 7CB10DA31D99621700731EE9 /* SwiftlyExt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7CD99CD41D9002E100668467 /* Swiftly iOS */ = {
+		7CD99CD41D9002E100668467 /* SwiftlyExt iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CD99CDD1D9002E100668467 /* Build configuration list for PBXNativeTarget "Swiftly iOS" */;
+			buildConfigurationList = 7CD99CDD1D9002E100668467 /* Build configuration list for PBXNativeTarget "SwiftlyExt iOS" */;
 			buildPhases = (
 				7CD99CD01D9002E100668467 /* Sources */,
 				7CD99CD11D9002E100668467 /* Frameworks */,
@@ -353,14 +353,14 @@
 			);
 			dependencies = (
 			);
-			name = "Swiftly iOS";
+			name = "SwiftlyExt iOS";
 			productName = Swiftly;
-			productReference = 7CD99CD51D9002E100668467 /* Swiftly.framework */;
+			productReference = 7CD99CD51D9002E100668467 /* SwiftlyExt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7CD99CE91D901F0300668467 /* Swiftly iOS Tests */ = {
+		7CD99CE91D901F0300668467 /* SwiftlyExt iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CD99CF21D901F0300668467 /* Build configuration list for PBXNativeTarget "Swiftly iOS Tests" */;
+			buildConfigurationList = 7CD99CF21D901F0300668467 /* Build configuration list for PBXNativeTarget "SwiftlyExt iOS Tests" */;
 			buildPhases = (
 				7CD99CE61D901F0300668467 /* Sources */,
 				7CD99CE71D901F0300668467 /* Frameworks */,
@@ -371,9 +371,9 @@
 			dependencies = (
 				7CD99CF11D901F0300668467 /* PBXTargetDependency */,
 			);
-			name = "Swiftly iOS Tests";
+			name = "SwiftlyExt iOS Tests";
 			productName = SwiftlyTests;
-			productReference = 7CD99CEA1D901F0300668467 /* Swiftly iOS Tests.xctest */;
+			productReference = 7CD99CEA1D901F0300668467 /* SwiftlyExt iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -423,7 +423,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7CD99CCF1D9002E100668467 /* Build configuration list for PBXProject "Swiftly" */;
+			buildConfigurationList = 7CD99CCF1D9002E100668467 /* Build configuration list for PBXProject "SwiftlyExt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -435,13 +435,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7CD99CD41D9002E100668467 /* Swiftly iOS */,
-				7CD99CE91D901F0300668467 /* Swiftly iOS Tests */,
-				7C135F701D9964A000994840 /* Swiftly macOS */,
-				7C135F8F1D99660E00994840 /* Swiftly macOS Tests */,
-				7CB10DA21D99621700731EE9 /* Swiftly tvOS */,
-				7C135F5E1D99637800994840 /* Swiftly tvOS Tests */,
-				7CB10D911D99613C00731EE9 /* Swiftly watchOS */,
+				7CD99CD41D9002E100668467 /* SwiftlyExt iOS */,
+				7CD99CE91D901F0300668467 /* SwiftlyExt iOS Tests */,
+				7C135F701D9964A000994840 /* SwiftlyExt macOS */,
+				7C135F8F1D99660E00994840 /* SwiftlyExt macOS Tests */,
+				7CB10DA21D99621700731EE9 /* SwiftlyExt tvOS */,
+				7C135F5E1D99637800994840 /* SwiftlyExt tvOS Tests */,
+				7CB10D911D99613C00731EE9 /* SwiftlyExt watchOS */,
 				7C21FF651D91375E00BB0B36 /* Cleanup Whitespace */,
 			);
 		};
@@ -596,17 +596,17 @@
 /* Begin PBXTargetDependency section */
 		7C135F661D99637800994840 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7CB10DA21D99621700731EE9 /* Swiftly tvOS */;
+			target = 7CB10DA21D99621700731EE9 /* SwiftlyExt tvOS */;
 			targetProxy = 7C135F651D99637800994840 /* PBXContainerItemProxy */;
 		};
 		7C135F971D99660E00994840 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7C135F701D9964A000994840 /* Swiftly macOS */;
+			target = 7C135F701D9964A000994840 /* SwiftlyExt macOS */;
 			targetProxy = 7C135F961D99660E00994840 /* PBXContainerItemProxy */;
 		};
 		7CD99CF11D901F0300668467 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7CD99CD41D9002E100668467 /* Swiftly iOS */;
+			target = 7CD99CD41D9002E100668467 /* SwiftlyExt iOS */;
 			targetProxy = 7CD99CF01D901F0300668467 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -658,7 +658,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -681,7 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -750,7 +750,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -773,7 +773,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -795,7 +795,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -817,7 +817,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -940,7 +940,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -962,7 +962,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.khoiln.Swiftly;
-				PRODUCT_NAME = Swiftly;
+				PRODUCT_NAME = SwiftlyExt;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -995,7 +995,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7C135F671D99637800994840 /* Build configuration list for PBXNativeTarget "Swiftly tvOS Tests" */ = {
+		7C135F671D99637800994840 /* Build configuration list for PBXNativeTarget "SwiftlyExt tvOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C135F681D99637800994840 /* Debug */,
@@ -1004,7 +1004,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C135F761D9964A000994840 /* Build configuration list for PBXNativeTarget "Swiftly macOS" */ = {
+		7C135F761D9964A000994840 /* Build configuration list for PBXNativeTarget "SwiftlyExt macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C135F771D9964A000994840 /* Debug */,
@@ -1013,7 +1013,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C135F981D99660E00994840 /* Build configuration list for PBXNativeTarget "Swiftly macOS Tests" */ = {
+		7C135F981D99660E00994840 /* Build configuration list for PBXNativeTarget "SwiftlyExt macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C135F991D99660E00994840 /* Debug */,
@@ -1031,7 +1031,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CB10D971D99613C00731EE9 /* Build configuration list for PBXNativeTarget "Swiftly watchOS" */ = {
+		7CB10D971D99613C00731EE9 /* Build configuration list for PBXNativeTarget "SwiftlyExt watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CB10D981D99613C00731EE9 /* Debug */,
@@ -1040,7 +1040,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CB10DA81D99621700731EE9 /* Build configuration list for PBXNativeTarget "Swiftly tvOS" */ = {
+		7CB10DA81D99621700731EE9 /* Build configuration list for PBXNativeTarget "SwiftlyExt tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CB10DA91D99621700731EE9 /* Debug */,
@@ -1049,7 +1049,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CD99CCF1D9002E100668467 /* Build configuration list for PBXProject "Swiftly" */ = {
+		7CD99CCF1D9002E100668467 /* Build configuration list for PBXProject "SwiftlyExt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CD99CDB1D9002E100668467 /* Debug */,
@@ -1058,7 +1058,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CD99CDD1D9002E100668467 /* Build configuration list for PBXNativeTarget "Swiftly iOS" */ = {
+		7CD99CDD1D9002E100668467 /* Build configuration list for PBXNativeTarget "SwiftlyExt iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CD99CDE1D9002E100668467 /* Debug */,
@@ -1067,7 +1067,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CD99CF21D901F0300668467 /* Build configuration list for PBXNativeTarget "Swiftly iOS Tests" */ = {
+		7CD99CF21D901F0300668467 /* Build configuration list for PBXNativeTarget "SwiftlyExt iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CD99CF31D901F0300668467 /* Debug */,

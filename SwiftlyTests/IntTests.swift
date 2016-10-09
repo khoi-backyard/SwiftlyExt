@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Swiftly
+import SwiftlyExt
 
 class IntTests: XCTestCase {
 

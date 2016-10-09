@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7CB10DA21D99621700731EE9"
-               BuildableName = "Swiftly.framework"
-               BlueprintName = "Swiftly tvOS"
-               ReferencedContainer = "container:Swiftly.xcodeproj">
+               BuildableName = "SwiftlyExt.framework"
+               BlueprintName = "SwiftlyExt tvOS"
+               ReferencedContainer = "container:SwiftlyExt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C135F5E1D99637800994840"
-               BuildableName = "Swiftly tvOS Tests.xctest"
-               BlueprintName = "Swiftly tvOS Tests"
-               ReferencedContainer = "container:Swiftly.xcodeproj">
+               BuildableName = "SwiftlyExt tvOS Tests.xctest"
+               BlueprintName = "SwiftlyExt tvOS Tests"
+               ReferencedContainer = "container:SwiftlyExt.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7CB10DA21D99621700731EE9"
-            BuildableName = "Swiftly.framework"
-            BlueprintName = "Swiftly tvOS"
-            ReferencedContainer = "container:Swiftly.xcodeproj">
+            BuildableName = "SwiftlyExt.framework"
+            BlueprintName = "SwiftlyExt tvOS"
+            ReferencedContainer = "container:SwiftlyExt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7CB10DA21D99621700731EE9"
-            BuildableName = "Swiftly.framework"
-            BlueprintName = "Swiftly tvOS"
-            ReferencedContainer = "container:Swiftly.xcodeproj">
+            BuildableName = "SwiftlyExt.framework"
+            BlueprintName = "SwiftlyExt tvOS"
+            ReferencedContainer = "container:SwiftlyExt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <EnvironmentVariables>
@@ -90,9 +90,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7CB10DA21D99621700731EE9"
-            BuildableName = "Swiftly.framework"
-            BlueprintName = "Swiftly tvOS"
-            ReferencedContainer = "container:Swiftly.xcodeproj">
+            BuildableName = "SwiftlyExt.framework"
+            BlueprintName = "SwiftlyExt tvOS"
+            ReferencedContainer = "container:SwiftlyExt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

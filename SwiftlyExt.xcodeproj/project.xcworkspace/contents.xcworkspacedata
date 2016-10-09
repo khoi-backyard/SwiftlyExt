@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Swiftly.xcodeproj">
+      location = "self:/Users/khoiln/Desktop/Khoi Projects/Swiftly/SwiftlyExt.xcodeproj">
    </FileRef>
 </Workspace>
