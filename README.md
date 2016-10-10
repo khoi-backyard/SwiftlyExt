@@ -30,9 +30,9 @@ SwiftlyExt is a library that extends certain Swift standard types and classes us
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1.0+ is required to build Alamofire 4.0.0+.
+> CocoaPods 1.1.0+ is required to build SwiftlyExt.
 
-To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate SwiftlyExt into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
