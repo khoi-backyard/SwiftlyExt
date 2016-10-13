@@ -120,12 +120,12 @@ public extension Date{
 
     /// Return the string representation for a date.
     ///
-    /// - parameter dateStyle: A DateFormatter.Style. default to `.medium`
-    /// - parameter timeStyle: A DateFormatter.Style. default to `.medium`
-    /// - parameter locale:    Locale of the string. default to `.locale`
+    /// - parameter dateStyle: A DateFormatter.Style for the date. default to `.medium`.
+    /// - parameter timeStyle: A DateFormatter.Style for the time. default to `.medium`.
+    /// - parameter locale:    Locale of the string. default to the current locale.
     ///
     /// - returns: The date string.
-    func string(dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .medium, locale: Locale = Locale.current) -> String{
+    func toString(dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .medium, locale: Locale = Locale.current) -> String{
         let df = DateFormatter()
         df.dateStyle = dateStyle
         df.timeStyle = timeStyle
@@ -140,7 +140,7 @@ public extension Date{
     /// - parameter locale: Locale of the string. default to `.locale`
     ///
     /// - returns: The date string.
-    func string(format: String, locale: Locale = Locale.current) -> String{
+    func toString(format: String, locale: Locale = Locale.current) -> String{
         let df = DateFormatter()
         df.dateFormat = format
         df.locale = locale

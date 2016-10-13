@@ -17,11 +17,11 @@ class StringTests: XCTestCase {
     }
 
     func testDate(){
-        guard let date = "01-01-1970 00:34:22".date(format: dateFormatString) else {
+        guard let date = "01/01/1970 00:34:22".date(format: dateFormatString) else {
             XCTFail("Can't parse a valid date")
             return
         }
-        XCTAssertNil("13-14-1780 14:38:88".date(format: dateFormatString), "Should return nil for invalid date")
+        XCTAssertNil("13/14/1780 14:38:88".date(format: dateFormatString), "Should return nil for invalid date")
         XCTAssertEqual(date.year, 1970)
         XCTAssertEqual(date.month, 1)
         XCTAssertEqual(date.day, 1)

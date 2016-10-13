@@ -42,19 +42,25 @@ class DateTests: XCTestCase {
     }
 
     func testCustomInit(){
-        XCTAssertNotNil(Date(from: "01-01-1970 00:34:22", format: dateFormatString), "Should return a valid date")
-        XCTAssertNil(Date(from: "01-34-1970 00:34:22", format: dateFormatString), "Should return a valid date")
+        XCTAssertNotNil(Date(from: "01/01/1970 00:34:22", format: dateFormatString), "Should return a valid date")
+        XCTAssertNil(Date(from: "01/34/1970 00:34:22", format: dateFormatString), "Should return a invalid date")
     }
 
     func testCustomerProperty(){
-        let aDate = Date(from: "30-12-1970 14:34:22", format: dateFormatString)
+        let aDate = Date(from: "01/01/1970 00:34:22", format: dateFormatString)
         XCTAssertEqual(aDate?.era, 1)
         XCTAssertEqual(aDate?.year, 1970)
-        XCTAssertEqual(aDate?.month, 12)
-        XCTAssertEqual(aDate?.day, 30)
-        XCTAssertEqual(aDate?.hour, 14)
+        XCTAssertEqual(aDate?.month, 1)
+        XCTAssertEqual(aDate?.day, 1)
+        XCTAssertEqual(aDate?.hour, 00)
         XCTAssertEqual(aDate?.minute, 34)
         XCTAssertEqual(aDate?.second, 22)
-        XCTAssertEqual(aDate?.weekday, 4)
+        XCTAssertEqual(aDate?.weekday, 5)
+    }
+    
+    func testStringFormat(){
+        let aDate = Date(from: "30/12/2016 14:34:22", format: dateFormatString)
+        XCTAssertEqual(aDate?.toString(format: dateFormatString), "30/12/2016 14:34:22")
+        XCTAssertEqual(aDate?.toString(format: "MMM yyyy"), "Dec 2016")
     }
 }
