@@ -173,8 +173,7 @@ public extension Date{
                           byAddingDays days: Int = 0,
                           byAddingHours hours: Int = 0,
                           byAddingMinutes minutes: Int = 0,
-                          byAddingSeconds seconds: Int = 0,
-                          byAddingNanoseconds nanoseconds: Int = 0) -> Date?{
+                          byAddingSeconds seconds: Int = 0) -> Date?{
         var dc = DateComponents()
         dc.year = years
         dc.month = months
@@ -182,35 +181,68 @@ public extension Date{
         dc.hour = hours
         dc.minute = minutes
         dc.second = seconds
-        dc.nanosecond = nanoseconds
         return calendar.date(byAdding: dc, to: self)
     }
     
+    
+    /// Return a new Date instance by adding n years to it.
+    ///
+    /// - parameter years: Number of years to add.
+    ///
+    /// - returns: The new Date.
     func date(byAddingYears years: Int) -> Date?{
         return _date(byAddingYears: years)
     }
     
+    
+    /// Return a new Date instance by adding n months to it.
+    ///
+    /// - parameter months: Number of months to add.
+    ///
+    /// - returns: The new Date.
     func date(byAddingMonths months: Int) -> Date?{
         return _date(byAddingMonths: months)
     }
     
+    
+    /// Return a new Date instance by adding n days to it.
+    ///
+    /// - parameter days: Number of days to add.
+    ///
+    /// - returns: The new Date.
     func date(byAddingDays days: Int) -> Date?{
         return _date(byAddingDays: days)
     }
     
+    
+    /// Return a new Date instance by adding n hours to it.
+    ///
+    /// - parameter hours: Number of hours to add.
+    ///
+    /// - returns: The new Date.
     func date(byAddingHours hours: Int) -> Date?{
         return _date(byAddingHours: hours)
     }
     
+    
+    /// Return a new Date instance by adding n minutes to it.
+    ///
+    /// - parameter minutes: Number of minutes to add.
+    ///
+    /// - returns: The new Date.
     func date(byAddingMinutes minutes: Int) -> Date?{
         return _date(byAddingMinutes: minutes)
     }
     
+    
+    /// Return a new Date instance by adding n seconds to it.
+    ///
+    /// - parameter seconds: Number of seconds to add.
+    ///
+    /// - returns: The new Date.
     func date(byAddingSeconds seconds: Int) -> Date?{
         return _date(byAddingSeconds: seconds)
     }
     
-    func date(byAddingNanoseconds nanoseconds: Int) -> Date?{
-        return _date(byAddingNanoseconds: nanoseconds)
-    }
+    
 }

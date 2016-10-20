@@ -63,4 +63,35 @@ class DateTests: XCTestCase {
         XCTAssertEqual(aDate?.toString(format: dateFormatString), "30/12/2016 14:34:22")
         XCTAssertEqual(aDate?.toString(format: "MMM yyyy"), "Dec 2016")
     }
+    
+    func testAddingDate(){
+        let aDate = Date(from: "30/12/2016 14:34:22", format: dateFormatString)
+        XCTAssertEqual(aDate?.date(byAddingYears: 1)?.year, 2017)
+        XCTAssertEqual(aDate?.date(byAddingYears: -1)?.year, 2015)
+        
+        XCTAssertEqual(aDate?.date(byAddingMonths: 1)?.year, 2017, "Should switch to next year if current month is 12")
+        XCTAssertEqual(aDate?.date(byAddingMonths: 1)?.month, 1)
+        XCTAssertEqual(aDate?.date(byAddingMonths: -1)?.month, 11)
+
+        XCTAssertEqual(aDate?.date(byAddingDays: 1)?.day, 31)
+        XCTAssertEqual(aDate?.date(byAddingDays: 2)?.day, 1)
+        XCTAssertEqual(aDate?.date(byAddingDays: -1)?.day, 29)
+
+        XCTAssertEqual(aDate?.date(byAddingHours: 1)?.hour, 15)
+        XCTAssertEqual(aDate?.date(byAddingHours: -1)?.hour, 13)
+        XCTAssertEqual(aDate?.date(byAddingHours: 10)?.hour, 0)
+        XCTAssertEqual(aDate?.date(byAddingHours: 10)?.day, 31)
+        
+        XCTAssertEqual(aDate?.date(byAddingMinutes: 1)?.minute, 35)
+        XCTAssertEqual(aDate?.date(byAddingMinutes: -1)?.minute, 33)
+        XCTAssertEqual(aDate?.date(byAddingMinutes: 26)?.hour, 15)
+        XCTAssertEqual(aDate?.date(byAddingMinutes: 26)?.minute, 0)
+
+        XCTAssertEqual(aDate?.date(byAddingSeconds: 1)?.second, 23)
+        XCTAssertEqual(aDate?.date(byAddingSeconds: -1)?.second, 21)
+        XCTAssertEqual(aDate?.date(byAddingSeconds: 38)?.second, 0)
+        XCTAssertEqual(aDate?.date(byAddingSeconds: 38)?.minute, 35)
+
+        
+    }
 }
