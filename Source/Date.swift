@@ -116,8 +116,7 @@ public extension Date{
         guard let date = df.date(from: string) else { return nil }
         self = date
     }
-
-
+    
     /// Return the string representation for a date.
     ///
     /// - parameter dateStyle: A DateFormatter.Style for the date. default to `.medium`.
@@ -164,5 +163,54 @@ public extension Date{
     /// - returns: True if self is after input date, false otherwise.
     func isAfter(_ date: Date) -> Bool{
         return self.compare(date) == .orderedDescending
+    }
+}
+
+//MARK: Adding date
+public extension Date{
+    fileprivate func _date(byAddingYears years: Int = 0,
+                          byAddingMonths months: Int = 0,
+                          byAddingDays days: Int = 0,
+                          byAddingHours hours: Int = 0,
+                          byAddingMinutes minutes: Int = 0,
+                          byAddingSeconds seconds: Int = 0,
+                          byAddingNanoseconds nanoseconds: Int = 0) -> Date?{
+        var dc = DateComponents()
+        dc.year = years
+        dc.month = months
+        dc.day = days
+        dc.hour = hours
+        dc.minute = minutes
+        dc.second = seconds
+        dc.nanosecond = nanoseconds
+        return calendar.date(byAdding: dc, to: self)
+    }
+    
+    func date(byAddingYears years: Int) -> Date?{
+        return _date(byAddingYears: years)
+    }
+    
+    func date(byAddingMonths months: Int) -> Date?{
+        return _date(byAddingMonths: months)
+    }
+    
+    func date(byAddingDays days: Int) -> Date?{
+        return _date(byAddingDays: days)
+    }
+    
+    func date(byAddingHours hours: Int) -> Date?{
+        return _date(byAddingHours: hours)
+    }
+    
+    func date(byAddingMinutes minutes: Int) -> Date?{
+        return _date(byAddingMinutes: minutes)
+    }
+    
+    func date(byAddingSeconds seconds: Int) -> Date?{
+        return _date(byAddingSeconds: seconds)
+    }
+    
+    func date(byAddingNanoseconds nanoseconds: Int) -> Date?{
+        return _date(byAddingNanoseconds: nanoseconds)
     }
 }
