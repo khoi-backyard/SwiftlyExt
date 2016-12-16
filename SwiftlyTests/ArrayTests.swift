@@ -122,6 +122,49 @@ class ArrayTests: XCTestCase {
         let objects2 = [["x":1, "y":1], ["x":1, "y":2]]
         XCTAssert(objects1.intersectionWith(objects2, comparator: compare) == [["x":1, "y":2]])
     }
+    
+    func testEvery(){
+        XCTAssert([true, true, true].every{ $0 == true }, "every true values")
+        XCTAssertFalse([true, false, true].every{ $0 == true }, "one false value")
+        
+        var count = 0
+        XCTAssert([0,10,28].every{
+            count += 1
+            return $0 % 2 == 0
+        }, "Even number")
+        
+        XCTAssert(count == 3, "Runtime \(count) should be 3")
+
+        count = 0
+        
+        XCTAssertFalse([0,11,28,10].every{
+            count += 1
+            return $0 % 2 == 0
+        }, "An odd number")
+        
+        XCTAssert(count == 2, "Runtime \(count) should be 1")
+    }
+    
+    func testSome(){
+        XCTAssert([false, true, false].some{ $0 == true }, "one true value")
+        XCTAssertFalse([false, false, false].some{ $0 == true }, "all false value")
+        
+        
+        var count = 0
+        
+        XCTAssert([11,23,25,26].some{
+            count += 1
+            return $0 % 2 == 0 }, "Even number at the end")
+        XCTAssert(count == 4, "Runtime \(count) should be 4")
+        
+        count = 0
+        XCTAssert([0,11,28,10].some{
+            count += 1
+            return $0 % 2 == 0
+        }, "An odd number")
+        XCTAssert(count == 1, "Runtime \(count) should be 1")
+    }
+    
 }
 
 

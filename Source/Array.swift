@@ -100,6 +100,19 @@ public extension Array{
     func dropWhile(predicate: (Element) -> Bool) -> [Element]{
         return self._baseWhile(predicate: predicate, isDrop: true)
     }
+    
+    /// Returns true if all of the values in the array pass the predicate test. Stop traversing the list once a falsey value found.
+    ///
+    /// - Parameter predicate: The function invoked per iteration.
+    /// - Returns: Boolean
+    func every(predicate: (Element) -> Bool) -> Bool{
+        for elem in self{
+            if !predicate(elem) {
+                return false
+            }
+        }
+        return true
+    }
 
     /// Returns the index of the first element predicate returns true for.
     ///
@@ -141,6 +154,20 @@ public extension Array{
             return []
         }
         return Array(self[start..<end])
+    }
+ 
+    
+    /// Returns true if all of the values in the array pass the predicate test. Stop traversing the list once a true-ful value found.
+    ///
+    /// - Parameter predicate: The function invoked per iteration.
+    /// - Returns: Boolean
+    func some(predicate: (Element) -> Bool) -> Bool{
+        for elem in self{
+            if predicate(elem){
+                return true
+            }
+        }
+        return false
     }
 }
 

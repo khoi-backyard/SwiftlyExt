@@ -91,7 +91,5 @@ class DateTests: XCTestCase {
         XCTAssertEqual(aDate?.date(byAddingSeconds: -1)?.second, 21)
         XCTAssertEqual(aDate?.date(byAddingSeconds: 38)?.second, 0)
         XCTAssertEqual(aDate?.date(byAddingSeconds: 38)?.minute, 35)
-
-        
     }
 }
