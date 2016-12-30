@@ -38,6 +38,7 @@
 		7C14D2201DA8E99800204587 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14D21F1DA8E99800204587 /* DateTests.swift */; };
 		7C14D2211DA8E99E00204587 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14D21F1DA8E99800204587 /* DateTests.swift */; };
 		7C14D2221DA8E99F00204587 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14D21F1DA8E99800204587 /* DateTests.swift */; };
+		7C4EFA0A1E16469200DC9B08 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA091E16469200DC9B08 /* CGPoint.swift */; };
 		7CB10D881D99344700731EE9 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D871D99344700731EE9 /* Array.swift */; };
 		7CB10D8A1D995EF300731EE9 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D891D995EF300731EE9 /* ArrayTests.swift */; };
 		7CB10D9A1D99619C00731EE9 /* Swiftly.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD99CE21D9002F900668467 /* Swiftly.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,6 +93,7 @@
 		7C135F901D99660E00994840 /* SwiftlyExt macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftlyExt macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14D21A1DA8E4DD00204587 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		7C14D21F1DA8E99800204587 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		7C4EFA091E16469200DC9B08 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		7CB10D871D99344700731EE9 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7CB10D891D995EF300731EE9 /* ArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		7CB10D8B1D99609A00731EE9 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				7CB10D871D99344700731EE9 /* Array.swift */,
 				7C14D21A1DA8E4DD00204587 /* Date.swift */,
 				7CF95F751DAB9D5D00C61E03 /* String.swift */,
+				7C4EFA091E16469200DC9B08 /* CGPoint.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -394,7 +397,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Khoi Lai";
 				TargetAttributes = {
 					7C135F5E1D99637800994840 = {
@@ -594,6 +597,7 @@
 				7CD99CE51D901C3800668467 /* Int.swift in Sources */,
 				7CF95F761DAB9D5D00C61E03 /* String.swift in Sources */,
 				7C14D21B1DA8E4DD00204587 /* Date.swift in Sources */,
+				7C4EFA0A1E16469200DC9B08 /* CGPoint.swift in Sources */,
 				7CD99CF81D9020BF00668467 /* Range.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -862,6 +866,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -915,6 +920,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
