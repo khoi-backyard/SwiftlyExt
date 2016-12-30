@@ -8,13 +8,13 @@
 
 import Foundation
 
-extension CGPoint{
+public extension CGPoint{
     
     /// Calculate distance from self to another point.
     ///
     /// - Parameter to: destination point
     /// - Returns: distance between two points.
-    public func distance(to point: CGPoint) -> CGFloat{
+    func distance(to point: CGPoint) -> CGFloat{
         return CGPoint.distance(from: self, to: point)
     }
     
@@ -25,7 +25,7 @@ extension CGPoint{
     ///   - from: origin point
     ///   - to: destination point
     /// - Returns: distance between two points.
-    public static func distance(from: CGPoint, to: CGPoint) -> CGFloat {
+    static func distance(from: CGPoint, to: CGPoint) -> CGFloat {
         return sqrt(pow(to.x - from.x, 2) + pow(to.y - from.y, 2))
     }
 }
