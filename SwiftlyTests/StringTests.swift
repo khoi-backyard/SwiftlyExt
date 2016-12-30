@@ -31,4 +31,38 @@ class StringTests: XCTestCase {
         XCTAssertEqual(date.nanosecond, 0)
     }
 
+    func testBase64Encode(){
+        XCTAssert("a".base64Encoded == "YQ==", "2 padding chars")
+        XCTAssert("aa".base64Encoded == "YWE=", "1 padding char")
+        XCTAssert("aaa".base64Encoded == "YWFh", "0 padding char")
+        XCTAssert("foo\0".base64Encoded == "Zm9vAA==", "U+0000")
+        XCTAssert("foo\0\0".base64Encoded == "Zm9vAAA=", "0 padding char")
+        XCTAssert("https://github.com/Swiftly".base64Encoded == "aHR0cHM6Ly9naXRodWIuY29tL1N3aWZ0bHk=")
+    }
+    
+    func testBase64Decode(){
+        XCTAssert("aHR0cHM6Ly9naXRodWIuY29tL1N3aWZ0bHk=".base64Decoded == "https://github.com/Swiftly")
+    }
+    
+    func testReversed(){
+        XCTAssert("Swiftly".reversed == "yltfiwS")
+        XCTAssert("abcdef".reversed == "fedcba")
+        XCTAssert("a".reversed == "a")
+        XCTAssert("".reversed == "")
+    }
+    
+    func testTrimmed(){
+        XCTAssert("\r\n\n\n Swiftly    \r\n\n".trimmed == "Swiftly")
+        XCTAssert("\n\n\n Swiftly    ".trimmed.reversed == "yltfiwS")
+    }
+    
+    func testURLEncoded(){
+        XCTAssert("abcd".urlEncoded == "abcd", "String must be unchanged")
+        XCTAssert("\n\t".urlEncoded == "%0A%09")
+        XCTAssert("Swiftly\t\nString\nTest".urlEncoded == "Swiftly%09%0AString%0ATest")
+    }
+    
+    func testURLDecoded(){
+        XCTAssert("https%3A%2F%2Fgithub.com%2Fkhoiln%2FSwiftlyEXT".urlDecoded == "https://github.com/khoiln/SwiftlyEXT")
+    }
 }
