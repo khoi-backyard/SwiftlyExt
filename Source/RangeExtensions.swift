@@ -1,5 +1,5 @@
 //
-//  Range.swift
+//  RangeExtensions.swift
 //  Swiftly
 //
 //  Created by Khoi Lai on 9/19/16.

@@ -1,5 +1,5 @@
 //
-//  Dictionary.swift
+//  DictionaryExtensions.swift
 //  SwiftlyExt
 //
 //  Created by Khoi Lai on 12/30/16.

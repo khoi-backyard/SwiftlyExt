@@ -1,5 +1,5 @@
 //
-//  Int.swift
+//  IntExtensions.swift
 //  Swiftly
 //
 //  Created by Khoi Lai on 9/19/16.

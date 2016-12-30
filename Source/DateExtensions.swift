@@ -1,5 +1,5 @@
 //
-//  Date.swift
+//  DateExtensions.swift
 //  Swiftly
 //
 //  Created by Khoi Lai on 08/10/2016.

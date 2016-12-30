@@ -1,16 +1,15 @@
 //
-//  CGFloat.swift
+//  CGFloatExtensions.swift
 //  SwiftlyExt
 //
 //  Created by Khoi Lai on 12/30/16.
 //  Copyright © 2016 Khoi Lai. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 public extension CGFloat{
 
-    
     /// Convert from degrees to radians
     ///
     /// - Returns: Radian value

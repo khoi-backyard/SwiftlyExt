@@ -1,5 +1,5 @@
 //
-//  String.swift
+//  StringExtensions.swift
 //  SwiftlyExt
 //
 //  Created by Khoi Lai on 10/10/2016.

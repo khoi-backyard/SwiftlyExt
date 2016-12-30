@@ -1,5 +1,5 @@
 //
-//  Array.swift
+//  Extensions.swift
 //  Swiftly
 //
 //  Created by Khoi Lai on 26/09/2016.
