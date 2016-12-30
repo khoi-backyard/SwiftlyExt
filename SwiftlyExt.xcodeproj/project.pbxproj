@@ -52,6 +52,13 @@
 		7C4EFA191E164C1700DC9B08 /* CGFloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA181E164C1700DC9B08 /* CGFloatTests.swift */; };
 		7C4EFA1A1E164C1700DC9B08 /* CGFloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA181E164C1700DC9B08 /* CGFloatTests.swift */; };
 		7C4EFA1B1E164C1700DC9B08 /* CGFloatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA181E164C1700DC9B08 /* CGFloatTests.swift */; };
+		7C4EFA1D1E164D3A00DC9B08 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA1C1E164D3A00DC9B08 /* Dictionary.swift */; };
+		7C4EFA1E1E164D6B00DC9B08 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA1C1E164D3A00DC9B08 /* Dictionary.swift */; };
+		7C4EFA1F1E164D6C00DC9B08 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA1C1E164D3A00DC9B08 /* Dictionary.swift */; };
+		7C4EFA201E164D6C00DC9B08 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA1C1E164D3A00DC9B08 /* Dictionary.swift */; };
+		7C4EFA221E164D9A00DC9B08 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA211E164D9A00DC9B08 /* DictionaryTests.swift */; };
+		7C4EFA231E164D9A00DC9B08 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA211E164D9A00DC9B08 /* DictionaryTests.swift */; };
+		7C4EFA241E164D9A00DC9B08 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA211E164D9A00DC9B08 /* DictionaryTests.swift */; };
 		7CB10D881D99344700731EE9 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D871D99344700731EE9 /* Array.swift */; };
 		7CB10D8A1D995EF300731EE9 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D891D995EF300731EE9 /* ArrayTests.swift */; };
 		7CB10D9A1D99619C00731EE9 /* Swiftly.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD99CE21D9002F900668467 /* Swiftly.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -110,6 +117,8 @@
 		7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointTests.swift; sourceTree = "<group>"; };
 		7C4EFA131E164A7700DC9B08 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 		7C4EFA181E164C1700DC9B08 /* CGFloatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatTests.swift; sourceTree = "<group>"; };
+		7C4EFA1C1E164D3A00DC9B08 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		7C4EFA211E164D9A00DC9B08 /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		7CB10D871D99344700731EE9 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		7CB10D891D995EF300731EE9 /* ArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		7CB10D8B1D99609A00731EE9 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -227,6 +236,7 @@
 				7CF95F751DAB9D5D00C61E03 /* String.swift */,
 				7C4EFA091E16469200DC9B08 /* CGPoint.swift */,
 				7C4EFA131E164A7700DC9B08 /* CGFloat.swift */,
+				7C4EFA1C1E164D3A00DC9B08 /* Dictionary.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -241,6 +251,7 @@
 				7CF95F7B1DAB9EAE00C61E03 /* StringTests.swift */,
 				7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */,
 				7C4EFA181E164C1700DC9B08 /* CGFloatTests.swift */,
+				7C4EFA211E164D9A00DC9B08 /* DictionaryTests.swift */,
 			);
 			path = SwiftlyTests;
 			sourceTree = "<group>";
@@ -556,6 +567,7 @@
 			files = (
 				7C135F6A1D9963D500994840 /* ArrayTests.swift in Sources */,
 				7C14D2221DA8E99F00204587 /* DateTests.swift in Sources */,
+				7C4EFA241E164D9A00DC9B08 /* DictionaryTests.swift in Sources */,
 				7CF95F811DAB9FAF00C61E03 /* StringTests.swift in Sources */,
 				7C135F6B1D9963D700994840 /* IntTests.swift in Sources */,
 				7C4EFA1B1E164C1700DC9B08 /* CGFloatTests.swift in Sources */,
@@ -568,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C135F7C1D99658B00994840 /* Array.swift in Sources */,
+				7C4EFA1E1E164D6B00DC9B08 /* Dictionary.swift in Sources */,
 				7C135F7A1D99658B00994840 /* Int.swift in Sources */,
 				7C4EFA151E164A8200DC9B08 /* CGFloat.swift in Sources */,
 				7CF95F7D1DAB9FA700C61E03 /* String.swift in Sources */,
@@ -583,6 +596,7 @@
 			files = (
 				7C135F9B1D99663800994840 /* ArrayTests.swift in Sources */,
 				7C14D2211DA8E99E00204587 /* DateTests.swift in Sources */,
+				7C4EFA231E164D9A00DC9B08 /* DictionaryTests.swift in Sources */,
 				7CF95F801DAB9FAE00C61E03 /* StringTests.swift in Sources */,
 				7C135F9C1D99663C00994840 /* IntTests.swift in Sources */,
 				7C4EFA1A1E164C1700DC9B08 /* CGFloatTests.swift in Sources */,
@@ -595,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CB10D9D1D9961A400731EE9 /* Array.swift in Sources */,
+				7C4EFA201E164D6C00DC9B08 /* Dictionary.swift in Sources */,
 				7CB10D9B1D9961A400731EE9 /* Int.swift in Sources */,
 				7C4EFA171E164A8300DC9B08 /* CGFloat.swift in Sources */,
 				7CF95F7F1DAB9FA800C61E03 /* String.swift in Sources */,
@@ -609,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CB10DAE1D99627D00731EE9 /* Array.swift in Sources */,
+				7C4EFA1F1E164D6C00DC9B08 /* Dictionary.swift in Sources */,
 				7CB10DAC1D99627D00731EE9 /* Int.swift in Sources */,
 				7C4EFA161E164A8200DC9B08 /* CGFloat.swift in Sources */,
 				7CF95F7E1DAB9FA800C61E03 /* String.swift in Sources */,
@@ -623,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CB10D881D99344700731EE9 /* Array.swift in Sources */,
+				7C4EFA1D1E164D3A00DC9B08 /* Dictionary.swift in Sources */,
 				7CD99CE51D901C3800668467 /* Int.swift in Sources */,
 				7C4EFA141E164A7700DC9B08 /* CGFloat.swift in Sources */,
 				7CF95F761DAB9D5D00C61E03 /* String.swift in Sources */,
@@ -638,6 +655,7 @@
 			files = (
 				7CD99CED1D901F0300668467 /* IntTests.swift in Sources */,
 				7C14D2201DA8E99800204587 /* DateTests.swift in Sources */,
+				7C4EFA221E164D9A00DC9B08 /* DictionaryTests.swift in Sources */,
 				7CF95F7C1DAB9EAE00C61E03 /* StringTests.swift in Sources */,
 				7CB10D8A1D995EF300731EE9 /* ArrayTests.swift in Sources */,
 				7C4EFA191E164C1700DC9B08 /* CGFloatTests.swift in Sources */,
