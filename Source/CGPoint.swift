@@ -14,7 +14,7 @@ extension CGPoint{
     ///
     /// - Parameter to: destination point
     /// - Returns: distance between two points.
-    public func distance(to: CGPoint) -> CGFloat{
+    public func distance(to point: CGPoint) -> CGFloat{
         return CGPoint.distance(from: self, to: point)
     }
     
