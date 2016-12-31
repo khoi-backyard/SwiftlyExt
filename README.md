@@ -10,7 +10,7 @@ SwiftlyExt is a library that extends certain Swift standard types and classes us
 
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Documentation](https://swiftly.readme.io)
+- [Documentation via CocoaDocs](http://cocoadocs.org/docsets/SwiftlyExt/)
 - [FAQ](#faq)
 - [License](#license)
 
