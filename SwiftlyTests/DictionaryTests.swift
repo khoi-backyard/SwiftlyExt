@@ -30,8 +30,10 @@ class DictionaryTests: XCTestCase {
         let dict = JSONDict(fromJsonString: jsonString)!
         XCTAssert((dict["number"] as! Double) == 5443.1 , "number prop")
         XCTAssert((dict["name"] as! String) == "Swiftly", "string prop")
-        XCTAssert((dict["list"] as! [Any])[0] as! Int == 1234, "array list prop int")
-        XCTAssert((dict["list"] as! [Any])[1] as! Double == 45.234, "array list prop double")
+        
+        
+        XCTAssert((dict["list"] as! [Double])[0] == 1234, "array list prop int")
+        XCTAssert((dict["list"] as! [Double])[1] == 45.234, "array list prop double")
         XCTAssert((dict["object"] as! JSONDict)["sub_number"] as! Double == 877.2323, "subobject number")
         XCTAssert((dict["object"] as! JSONDict)["sub_name"] as! String == "SwiftlySub", "subobject string")
         XCTAssert(dict["bool"] as! Bool, "bool prop")
