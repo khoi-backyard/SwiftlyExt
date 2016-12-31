@@ -6,6 +6,7 @@
 //  Copyright © 2016 Khoi Lai. All rights reserved.
 //
 
+import Foundation
 import CoreGraphics
 
 public extension CGPoint{
