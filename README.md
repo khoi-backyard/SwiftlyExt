@@ -1,6 +1,7 @@
 ![](Logo/logo.png)
 
 [![Build Status](https://travis-ci.org/khoiln/SwiftlyExt.svg?branch=master)](https://travis-ci.org/khoiln/SwiftlyExt)
+[![codecov](https://codecov.io/gh/khoiln/SwiftlyExt/branch/master/graph/badge.svg)](https://codecov.io/gh/khoiln/SwiftlyExt)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/SwiftlyExt.svg)](https://img.shields.io/cocoapods/v/SwiftlyExt.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg)
