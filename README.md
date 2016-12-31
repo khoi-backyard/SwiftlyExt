@@ -5,6 +5,7 @@
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftlyExt.svg?style=flat)](http://cocoadocs.org/docsets/SwiftlyExt)
+[![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 SwiftlyExt is a library that extends certain Swift standard types and classes using extension feature in the Swift language.
 
