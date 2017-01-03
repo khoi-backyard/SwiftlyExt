@@ -177,6 +177,21 @@ class ArrayTests: XCTestCase {
         XCTAssert([Double].xorBy(arrays: [2.1,1.2], [4.3,2.4], iteratee: floor) == [1.2, 4.3])
         XCTAssert([Dictionary<String, Int>].xorWith(arrays: objects1, objects2, comparator: compare) == [["x":2,"y":1],["x":1,"y":1]])
     }
+
+    func testWithout(){
+        XCTAssert([1, 2, 1, 0, 3, 1, 4].without(0,1) == [2,3,4])
+
+    }
+
+    func testShuffle(){
+        XCTAssert([1].shuffled() == [1], "Behave correctly with 1 element")
+
+        let oneToTwentys = Array(1...20)
+        let shuffled = oneToTwentys.shuffled()
+        XCTAssert(shuffled != oneToTwentys, "does change the order") // Chance of false negative: 1 in ~2.4*10^18
+        XCTAssert(oneToTwentys == shuffled.sorted(), "Same number of elements and value after sorted")
+
+    }
 }
 
 

@@ -170,6 +170,25 @@ public extension Array{
         return false
     }
     
+
+    /// Returns a shuffled copy of the array, using a version of the Fisher-Yates shuffle.
+    ///
+    /// - Returns: Returns the new shuffled array.
+    func shuffled() -> [Element]{
+        var newArray = Array(self)
+        newArray.shuffle()
+        return newArray
+    }
+
+
+    /// Shuffle the elements of the collection in place.
+    mutating func shuffle(){
+        for index in 0..<self.count{
+            let randIndex = Int(arc4random_uniform(UInt32(self.count - 1)))
+            if index != randIndex { Swift.swap(&self[index], &self[randIndex]) }
+        }
+    }
+
     /// This method is like .xor except that it accepts comparator which is invoked to compare elements of arrays.
     ///
     /// - Parameters:
@@ -224,6 +243,14 @@ public extension Array where Element: Equatable{
     }
     
     
+    /// Creates an array excluding all given values using == comparator
+    ///
+    /// - Parameter values: The values to exclude.
+    /// - Returns: Returns the new array of filtered values.
+    func without(_ values: Element...) -> [Element]{
+        return _baseDifference(with: values, comparator: ==)
+    }
+
     /// Creates an array of unique values that is the symmetric difference of the provided arrays.
     ///
     /// - Parameter arrays: The arrays to inspect.
