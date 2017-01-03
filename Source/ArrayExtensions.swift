@@ -169,6 +169,16 @@ public extension Array{
         }
         return false
     }
+    
+    /// This method is like .xor except that it accepts comparator which is invoked to compare elements of arrays.
+    ///
+    /// - Parameters:
+    ///   - arrays: The arrays to inspect.
+    ///   - comparator: The comparator invoked per element.
+    /// - Returns: Returns the new array of values.
+    static func xorWith(arrays:[Element]..., comparator:(Element,Element)->Bool) -> [Element] {
+        return _baseXor(arrays: arrays, isXorBy:false, comparator:comparator)
+    }
 }
 
 //MARK: Element: Equatable
@@ -212,10 +222,29 @@ public extension Array where Element: Equatable{
     func intersectionBy(_ arrays: [Element]...,iteratee: @escaping (Element) -> Element) -> [Element]{
         return self._baseIntersection(arrays: arrays, comparator: ==, iteratee: iteratee)
     }
+    
+    
+    /// Creates an array of unique values that is the symmetric difference of the provided arrays.
+    ///
+    /// - Parameter arrays: The arrays to inspect.
+    /// - Returns: Returns the new array of values.
+    static func xor(arrays: [Element]...) -> [Element]{
+        return _baseXor(arrays: arrays, isXorBy: false, comparator: ==, iteratee: nil)
+    }
+    
+    /// This method is like .xor except that it accepts iteratee which is invoked for each element of each arrays to generate the criterion by which uniqueness is computed.
+    ///
+    /// - Parameters:
+    ///   - arrays: The arrays to inspect.
+    ///   - iteratee: The iteratee invoked per element.
+    /// - Returns: Returns the new array of values.
+    static func xorBy(arrays:[Element]..., iteratee: @escaping ((Element)->Element)) -> [Element]{
+        return _baseXor(arrays: arrays, isXorBy: true, comparator: ==, iteratee: iteratee)
+    }
 }
 
-//MARK: fileprivate helper methods
 
+//MARK: fileprivate helper methods
 fileprivate extension Array{
     func _baseDifference(with values: [Element],
                          comparator: (Element, Element) -> Bool,
@@ -288,7 +317,59 @@ fileprivate extension Array{
         }
         return result
     }
-
-
+    
+    static func _baseXor<T>(arrays:[[T]], isXorBy:Bool, comparator:(T,T)->Bool, iteratee:((T)->T)?=nil) -> [T] {
+        guard arrays.count > 0 else {return []}
+        guard arrays.count > 1 else {return arrays[0]}
+        
+        var result = arrays[arrays.count-1]
+        
+        for i in (0...arrays.count-2).reversed() {
+            let nextArr = arrays[i]
+            print(nextArr)
+            var tmp = [T]()
+            var uniqueElemMarker = [Bool](repeating: true, count: result.count)
+            
+            for elem1 in nextArr {
+                var isUnique = true
+                for j in 0..<result.count {
+                    let elem2 = result[j]
+                    if isXorBy {
+                        if let iteratee = iteratee {
+                            if comparator(iteratee(elem1), iteratee(elem2)) {
+                                isUnique = false
+                                uniqueElemMarker[j] = false
+                                break
+                            } else {
+                                continue
+                            }
+                        }
+                    }
+                    
+                    if comparator(elem1, elem2) {
+                        isUnique = false
+                        uniqueElemMarker[j] = false
+                        break
+                    }
+                }
+                
+                if isUnique {
+                    tmp.append(elem1)
+                }
+            }
+            
+            for i in 0..<result.count {
+                if uniqueElemMarker[i] {
+                    tmp.append(result[i])
+                }
+            }
+            
+            result = tmp
+        }
+        
+        return result
+    }
 }
+
+
 

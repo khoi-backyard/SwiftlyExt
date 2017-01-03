@@ -165,6 +165,18 @@ class ArrayTests: XCTestCase {
         XCTAssert(count == 1, "Runtime \(count) should be 1")
     }
     
+    func testXor(){
+        let objects1 = [["x":1, "y":2], ["x":2, "y":1]]
+        let objects2 = [["x":1, "y":1], ["x":1, "y":2]]
+        
+        
+        
+        XCTAssert([Int].xor(arrays: [2,1],[4,2]) == [1,4])
+        XCTAssert([Int].xor(arrays: []) == [])
+        XCTAssert([Int].xor(arrays: [1,2,3], [4,5,6]) == [1,2,3,4,5,6])
+        XCTAssert([Double].xorBy(arrays: [2.1,1.2], [4.3,2.4], iteratee: floor) == [1.2, 4.3])
+        XCTAssert([Dictionary<String, Int>].xorWith(arrays: objects1, objects2, comparator: compare) == [["x":2,"y":1],["x":1,"y":1]])
+    }
 }
 
 
