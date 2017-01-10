@@ -1,0 +1,11 @@
+included:
+  - Source
+excluded:
+  - SwiftlyTests
+opt_in_rules:
+  - empty_count
+  - vertical_whitespace
+disabled_rules:
+  - variable_name
+line_length: 200
+

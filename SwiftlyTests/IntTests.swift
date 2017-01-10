@@ -26,7 +26,7 @@ class IntTests: XCTestCase {
     func testTimes() {
         var count = 0
 
-        5.times{ _ in
+        5.times { _ in
             count += 1
         }
         XCTAssertEqual(count, 5)
@@ -38,24 +38,24 @@ class IntTests: XCTestCase {
         XCTAssertEqual(zero, 0)
 
 
-        (-9).times{ _ in
+        (-9).times { _ in
             zero += 1
         }
         XCTAssertEqual(zero, 0)
 
     }
 
-    func testTimesWithIndex(){
+    func testTimesWithIndex() {
         var indexes = [Int]()
 
         5.times { (idx) in
             indexes.append(idx)
         }
 
-        XCTAssertEqual(indexes, [0,1,2,3,4])
+        XCTAssertEqual(indexes, [0, 1,2, 3,4])
     }
 
-    func testOddAndEven(){
+    func testOddAndEven() {
         XCTAssert(4.isEven())
         XCTAssert(0.isEven())
         XCTAssertFalse(1.isEven())
@@ -67,7 +67,7 @@ class IntTests: XCTestCase {
         XCTAssert(3.isOdd())
     }
 
-    func testUpTo(){
+    func testUpTo() {
         var count = 0
         0.upTo(5) { _ in
             count += 1
@@ -91,13 +91,13 @@ class IntTests: XCTestCase {
             indexes.append(idx)
         }
 
-        XCTAssertEqual(indexes, [0,1,2,3,4,5])
+        XCTAssertEqual(indexes, [0, 1,2, 3,4, 5])
     }
 
 
-    func testDownTo(){
+    func testDownTo() {
         var count = 0
-        5.downTo(0){ _ in
+        5.downTo(0) { _ in
             count += 1
         }
         XCTAssertEqual(count, 6)
@@ -117,17 +117,17 @@ class IntTests: XCTestCase {
         5.downTo(0) { (idx) in
             indexes.append(idx)
         }
-        XCTAssertEqual(indexes, [5,4,3,2,1,0])
+        XCTAssertEqual(indexes, [5, 4,3, 2,1, 0])
     }
 
 
 
-    func testDigits(){
-        XCTAssertEqual(1234.digits(), [1,2,3,4])
-        XCTAssertEqual(01234.digits(), [1,2,3,4])
+    func testDigits() {
+        XCTAssertEqual(1234.digits(), [1, 2,3, 4])
+        XCTAssertEqual(01234.digits(), [1, 2,3, 4])
     }
 
-    func testIsIn(){
+    func testIsIn() {
         XCTAssert(0.isIn(range: 0..<200))
         XCTAssertFalse(200.isIn(range: 0..<200))
         XCTAssertFalse((-1).isIn(range: 0..<200))
@@ -138,7 +138,7 @@ class IntTests: XCTestCase {
         XCTAssertFalse(201.isIn(range: 0...200))
     }
 
-    func testFactorial(){
+    func testFactorial() {
         XCTAssertEqual(5.factorial(), 120)
         XCTAssertEqual(10.factorial(), 3628800)
         XCTAssertEqual(0.factorial(), 1)

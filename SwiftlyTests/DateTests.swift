@@ -29,24 +29,24 @@ class DateTests: XCTestCase {
         pastDate = calendar.date(byAdding: .day, value: -1, to: currentDate)
     }
 
-    func testBefore(){
+    func testBefore() {
         XCTAssert(currentDate.isBefore(futureDate!))
         XCTAssertFalse(currentDate.isBefore(pastDate!))
         XCTAssertFalse(currentDate.isBefore(sameDate!))
     }
 
-    func testAfter(){
+    func testAfter() {
         XCTAssert(currentDate.isAfter(pastDate!))
         XCTAssertFalse(currentDate.isAfter(futureDate!))
         XCTAssertFalse(currentDate.isAfter(sameDate!))
     }
 
-    func testCustomInit(){
+    func testCustomInit() {
         XCTAssertNotNil(Date(from: "01/01/1970 00:34:22", format: dateFormatString), "Should return a valid date")
         XCTAssertNil(Date(from: "01/34/1970 00:34:22", format: dateFormatString), "Should return a invalid date")
     }
 
-    func testCustomerProperty(){
+    func testCustomerProperty() {
         let aDate = Date(from: "01/01/1970 00:34:22", format: dateFormatString)
         XCTAssertEqual(aDate?.era, 1)
         XCTAssertEqual(aDate?.year, 1970)
@@ -57,18 +57,18 @@ class DateTests: XCTestCase {
         XCTAssertEqual(aDate?.second, 22)
         XCTAssertEqual(aDate?.weekday, 5)
     }
-    
-    func testStringFormat(){
+
+    func testStringFormat() {
         let aDate = Date(from: "30/12/2016 14:34:22", format: dateFormatString)
         XCTAssertEqual(aDate?.toString(format: dateFormatString), "30/12/2016 14:34:22")
         XCTAssertEqual(aDate?.toString(format: "MMM yyyy"), "Dec 2016")
     }
-    
-    func testAddingDate(){
+
+    func testAddingDate() {
         let aDate = Date(from: "30/12/2016 14:34:22", format: dateFormatString)
         XCTAssertEqual(aDate?.date(byAddingYears: 1)?.year, 2017)
         XCTAssertEqual(aDate?.date(byAddingYears: -1)?.year, 2015)
-        
+
         XCTAssertEqual(aDate?.date(byAddingMonths: 1)?.year, 2017, "Should switch to next year if current month is 12")
         XCTAssertEqual(aDate?.date(byAddingMonths: 1)?.month, 1)
         XCTAssertEqual(aDate?.date(byAddingMonths: -1)?.month, 11)
@@ -81,7 +81,7 @@ class DateTests: XCTestCase {
         XCTAssertEqual(aDate?.date(byAddingHours: -1)?.hour, 13)
         XCTAssertEqual(aDate?.date(byAddingHours: 10)?.hour, 0)
         XCTAssertEqual(aDate?.date(byAddingHours: 10)?.day, 31)
-        
+
         XCTAssertEqual(aDate?.date(byAddingMinutes: 1)?.minute, 35)
         XCTAssertEqual(aDate?.date(byAddingMinutes: -1)?.minute, 33)
         XCTAssertEqual(aDate?.date(byAddingMinutes: 26)?.hour, 15)

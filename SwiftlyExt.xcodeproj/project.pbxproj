@@ -316,6 +316,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C135F761D9964A000994840 /* Build configuration list for PBXNativeTarget "SwiftlyExt macOS" */;
 			buildPhases = (
+				7CA7C87D1E24E80800EA2F6A /* SwiftLint */,
 				7C135F6C1D9964A000994840 /* Sources */,
 				7C135F6D1D9964A000994840 /* Frameworks */,
 				7C135F6E1D9964A000994840 /* Headers */,
@@ -352,6 +353,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CB10D971D99613C00731EE9 /* Build configuration list for PBXNativeTarget "SwiftlyExt watchOS" */;
 			buildPhases = (
+				7CA7C87F1E24E82000EA2F6A /* SwiftLint */,
 				7CB10D8D1D99613C00731EE9 /* Sources */,
 				7CB10D8E1D99613C00731EE9 /* Frameworks */,
 				7CB10D8F1D99613C00731EE9 /* Headers */,
@@ -370,6 +372,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CB10DA81D99621700731EE9 /* Build configuration list for PBXNativeTarget "SwiftlyExt tvOS" */;
 			buildPhases = (
+				7CA7C87E1E24E81200EA2F6A /* SwiftLint */,
 				7CB10D9E1D99621700731EE9 /* Sources */,
 				7CB10D9F1D99621700731EE9 /* Frameworks */,
 				7CB10DA01D99621700731EE9 /* Headers */,
@@ -388,6 +391,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CD99CDD1D9002E100668467 /* Build configuration list for PBXNativeTarget "SwiftlyExt iOS" */;
 			buildPhases = (
+				7CA7C87C1E24E7EF00EA2F6A /* SwiftLint */,
 				7CD99CD01D9002E100668467 /* Sources */,
 				7CD99CD11D9002E100668467 /* Frameworks */,
 				7CD99CD21D9002E100668467 /* Headers */,
@@ -557,6 +561,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\ndirectories=(Source SwiftlyTests)\n\nfor directory in \"${directories[@]}\"\ndo\necho \"Cleaning whitespace in directory: $directory\"\nfind $directory -iregex '.*\\.swift' -exec sed -E -i '' -e 's/[[:blank:]]*$//' {} \\;\ndone\n";
+		};
+		7CA7C87C1E24E7EF00EA2F6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		7CA7C87D1E24E80800EA2F6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		7CA7C87E1E24E81200EA2F6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		7CA7C87F1E24E82000EA2F6A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

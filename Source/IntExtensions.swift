@@ -12,7 +12,7 @@ public extension Int {
     /// Convert current int to an [Int]
     ///
     /// - returns: An array of digits
-    func digits() -> [Int]{
+    func digits() -> [Int] {
 
         var digits: [Int] = []
         var curr = self
@@ -29,9 +29,9 @@ public extension Int {
     ///
     /// - parameter lowBound: The lowBound to go to
     /// - parameter callback: The block to invoke with current index
-    func downTo(_ lowBound: Int, callback: (Int) -> Void){
+    func downTo(_ lowBound: Int, callback: (Int) -> Void) {
         var curr = self
-        while curr >= lowBound{
+        while curr >= lowBound {
             callback(curr)
             curr -= 1
         }
@@ -48,7 +48,7 @@ public extension Int {
     /// Check if the integer is even.
     ///
     /// - returns: Bool whether the int is even
-    func isEven() -> Bool{
+    func isEven() -> Bool {
         return self % 2 == 0
     }
 
@@ -57,7 +57,7 @@ public extension Int {
     /// - parameter range: The range to check
     ///
     /// - returns: BOOL whether the int is in range
-    func isIn(range: Range<Int>) -> Bool{
+    func isIn(range: Range<Int>) -> Bool {
         return range ~= self
     }
 
@@ -66,21 +66,21 @@ public extension Int {
     /// - parameter range: The range to check
     ///
     /// - returns: BOOL whether the int is in range
-    func isIn(range: ClosedRange<Int>) -> Bool{
+    func isIn(range: ClosedRange<Int>) -> Bool {
         return range ~= self
     }
 
     /// Check if the integer is odd.
     ///
     /// - returns: Bool whether the int is odd
-    func isOdd() -> Bool{
+    func isOdd() -> Bool {
         return !isEven()
     }
 
     /// Invoke the callback function n times with zero-based indexes.
     ///
     /// - parameter callback: The block with current index
-    func times(_ callback: (Int) -> Void){
+    func times(_ callback: (Int) -> Void) {
         guard self > 0 else { return }
         (0..<self).each { (idx) in
             callback(idx)
@@ -91,11 +91,10 @@ public extension Int {
     ///
     /// - parameter upBound:  The upbound to go to
     /// - parameter callback: The block to invoke with current index
-    func upTo(_ upBound: Int, callback: (Int) -> Void){
+    func upTo(_ upBound: Int, callback: (Int) -> Void) {
         guard self <= upBound else { return }
         (self...upBound).each { (idx) in
             callback(idx)
         }
     }
 }
-

@@ -8,22 +8,22 @@
 
 import Foundation
 
-internal extension CountableRange{
+internal extension CountableRange {
 
-    func each(callback: (Bound) -> ()){
+    func each(callback: (Bound) -> ()) {
         for i in self {
             callback(i)
         }
     }
 
-    func each(callback: () -> ()){
+    func each(callback: () -> ()) {
         for _ in self {
             callback()
         }
     }
 
-    func toArray() -> [Bound]{
-        var result = [Bound]();
+    func toArray() -> [Bound] {
+        var result = [Bound]()
         self.each { (bound) in
             result.append(bound)
         }
@@ -31,21 +31,21 @@ internal extension CountableRange{
     }
 }
 
-internal extension CountableClosedRange{
-    func each(callback: (Bound) -> ()){
+internal extension CountableClosedRange {
+    func each(callback: (Bound) -> ()) {
         for i in self {
             callback(i)
         }
     }
 
-    func each(callback: () -> ()){
+    func each(callback: () -> ()) {
         for _ in self {
             callback()
         }
     }
 
-    func toArray() -> [Bound]{
-        var result = [Bound]();
+    func toArray() -> [Bound] {
+        var result = [Bound]()
         self.each { (bound) in
             result.append(bound)
         }

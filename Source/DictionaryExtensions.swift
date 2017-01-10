@@ -8,17 +8,16 @@
 
 import Foundation
 
-public extension Dictionary{
-    
-    
-    init?(fromJsonString json: String){
-        guard let data = (try? JSONSerialization.jsonObject(with: json.data(using: String.Encoding.utf8, allowLossyConversion: true)!, options: JSONSerialization.ReadingOptions.mutableContainers)) as? Dictionary else{
+public extension Dictionary {
+
+    init?(fromJsonString json: String) {
+        guard let data = (try? JSONSerialization.jsonObject(with: json.data(using: String.Encoding.utf8, allowLossyConversion: true)!,
+                                                            options: JSONSerialization.ReadingOptions.mutableContainers)) as? Dictionary else {
             return nil
         }
         self = data
     }
 
-    
     /// Convert from dictionary to Json String
     ///
     /// - Parameter prettify: Pretty printed or not
@@ -28,6 +27,5 @@ public extension Dictionary{
         let str = String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
         return String(str ?? "")
     }
-    
-   
+
 }

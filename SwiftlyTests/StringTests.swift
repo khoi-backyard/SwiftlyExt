@@ -16,7 +16,7 @@ class StringTests: XCTestCase {
         super.setUp()
     }
 
-    func testDate(){
+    func testDate() {
         guard let date = "01/01/1970 00:34:22".date(format: dateFormatString) else {
             XCTFail("Can't parse a valid date")
             return
@@ -31,7 +31,7 @@ class StringTests: XCTestCase {
         XCTAssertEqual(date.nanosecond, 0)
     }
 
-    func testBase64Encode(){
+    func testBase64Encode() {
         XCTAssert("a".base64Encoded == "YQ==", "2 padding chars")
         XCTAssert("aa".base64Encoded == "YWE=", "1 padding char")
         XCTAssert("aaa".base64Encoded == "YWFh", "0 padding char")
@@ -39,30 +39,30 @@ class StringTests: XCTestCase {
         XCTAssert("foo\0\0".base64Encoded == "Zm9vAAA=", "0 padding char")
         XCTAssert("https://github.com/Swiftly".base64Encoded == "aHR0cHM6Ly9naXRodWIuY29tL1N3aWZ0bHk=")
     }
-    
-    func testBase64Decode(){
+
+    func testBase64Decode() {
         XCTAssert("aHR0cHM6Ly9naXRodWIuY29tL1N3aWZ0bHk=".base64Decoded == "https://github.com/Swiftly")
     }
-    
-    func testReversed(){
+
+    func testReversed() {
         XCTAssert("Swiftly".reversed == "yltfiwS")
         XCTAssert("abcdef".reversed == "fedcba")
         XCTAssert("a".reversed == "a")
         XCTAssert("".reversed == "")
     }
-    
-    func testTrimmed(){
+
+    func testTrimmed() {
         XCTAssert("\r\n\n\n Swiftly    \r\n\n".trimmed == "Swiftly")
         XCTAssert("\n\n\n Swiftly    ".trimmed.reversed == "yltfiwS")
     }
-    
-    func testURLEncoded(){
+
+    func testURLEncoded() {
         XCTAssert("abcd".urlEncoded == "abcd", "String must be unchanged")
         XCTAssert("\n\t".urlEncoded == "%0A%09")
         XCTAssert("Swiftly\t\nString\nTest".urlEncoded == "Swiftly%09%0AString%0ATest")
     }
-    
-    func testURLDecoded(){
+
+    func testURLDecoded() {
         XCTAssert("https%3A%2F%2Fgithub.com%2Fkhoiln%2FSwiftlyEXT".urlDecoded == "https://github.com/khoiln/SwiftlyEXT")
     }
 }

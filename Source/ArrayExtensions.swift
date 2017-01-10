@@ -8,20 +8,20 @@
 
 import Foundation
 
-public extension Array{
+public extension Array {
     /// Create an array of elements split in to groups by the length of size.
     /// If array can't be split evenly, the final chunk contains all the remain elements.
     /// - parameter size: The length of each chunk. 0 by default.
     ///
     /// - returns: The new array contains chunks
-    func chunk(size: Int = 0) -> [[Element]]{
+    func chunk(size: Int = 0) -> [[Element]] {
         var result = [[Element]]()
         if size < 1 {
             return result
         }
         let length = self.count
         var i = 0
-        while i < length{
+        while i < length {
             let start = i
             i += size
             result.append(self.slice(start: start, end: i))
@@ -34,7 +34,7 @@ public extension Array{
     /// - parameter values: The values to concatenate.
     ///
     /// - returns: The new concatenated array.
-    func concat(values: Element...) -> [Element]{
+    func concat(values: Element...) -> [Element] {
         var result = Array(self)
         result.append(contentsOf: values)
         return result
@@ -46,7 +46,7 @@ public extension Array{
     /// - parameter comparator: The comparator invoked per element.
     ///
     /// - returns: Returns the new array of filtered values.
-    func differenceWith(_ values: [Element], comparator: (Element, Element) -> Bool) -> [Element]{
+    func differenceWith(_ values: [Element], comparator: (Element, Element) -> Bool) -> [Element] {
         return self._baseDifference(with: values, comparator: comparator, iteratee: nil)
     }
 
@@ -55,21 +55,20 @@ public extension Array{
     /// - parameter arrays: The arrays to concatenate.
     ///
     /// - returns: The new concatenated array.
-    func concat(arrays: [Element]...) -> [Element]{
+    func concat(arrays: [Element]...) -> [Element] {
         var result = Array(self)
-        for arr in arrays{
+        for arr in arrays {
             result.append(contentsOf: arr)
         }
         return result
     }
-
 
     /// Creates a new sliced array with n elements dropped from the beginning.
     ///
     /// - parameter n: The number of elements to drop. default to `1`
     ///
     /// - returns: Returns the new sliced array.
-    func drop(_ n: Int = 1) -> [Element]{
+    func drop(_ n: Int = 1) -> [Element] {
         return self.slice(start: Swift.max(n, 0), end: self.count)
     }
 
@@ -78,7 +77,7 @@ public extension Array{
     /// - parameter n: The number of elements to drop.
     ///
     /// - returns: Returns the new sliced array.
-    func dropRight(_ n: Int = 1) -> [Element]{
+    func dropRight(_ n: Int = 1) -> [Element] {
         let end = self.count - n
         return self.slice(start: 0, end: end < 0 ? 0 : end)
     }
@@ -88,7 +87,7 @@ public extension Array{
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the new sliced array.
-    func dropRightWhile(predicate: (Element) -> Bool) -> [Element]{
+    func dropRightWhile(predicate: (Element) -> Bool) -> [Element] {
         return self._baseWhile(predicate: predicate, isDrop: true, fromRight: true)
     }
 
@@ -97,16 +96,16 @@ public extension Array{
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the new sliced array.
-    func dropWhile(predicate: (Element) -> Bool) -> [Element]{
+    func dropWhile(predicate: (Element) -> Bool) -> [Element] {
         return self._baseWhile(predicate: predicate, isDrop: true)
     }
-    
+
     /// Returns true if all of the values in the array pass the predicate test. Stop traversing the list once a falsey value found.
     ///
     /// - Parameter predicate: The function invoked per iteration.
     /// - Returns: Boolean
-    func every(predicate: (Element) -> Bool) -> Bool{
-        for elem in self{
+    func every(predicate: (Element) -> Bool) -> Bool {
+        for elem in self {
             if !predicate(elem) {
                 return false
             }
@@ -119,7 +118,7 @@ public extension Array{
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the index of the found element, else nil.
-    func findIndex(predicate: (Element) -> Bool) -> Int?{
+    func findIndex(predicate: (Element) -> Bool) -> Int? {
         return _baseFindIndex(predicate: predicate)
     }
 
@@ -128,7 +127,7 @@ public extension Array{
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the index of the found element, else nil.
-    func findLastIndex(predicate: (Element) -> Bool) -> Int?{
+    func findLastIndex(predicate: (Element) -> Bool) -> Int? {
         return _baseFindIndex(predicate: predicate, fromRight: true)
     }
 
@@ -138,7 +137,7 @@ public extension Array{
     /// - parameter comparator: The comparator invoked per element.
     ///
     /// - returns: Returns the new array of shared values.
-    func intersectionWith(_ arrays: [Element]..., comparator:(Element, Element) -> Bool) -> [Element]{
+    func intersectionWith(_ arrays: [Element]..., comparator: (Element, Element) -> Bool) -> [Element] {
         return self._baseIntersection(arrays: arrays, comparator: comparator)
     }
 
@@ -148,42 +147,39 @@ public extension Array{
     /// - parameter end:   The end position. `nil` by default
     ///
     /// - returns: The sliced array
-    func slice(start: Int, end: Int? = nil) -> [Element]{
+    func slice(start: Int, end: Int? = nil) -> [Element] {
         let end = Swift.min(end ?? self.count, self.count)
         if start > self.count || start > end {
             return []
         }
         return Array(self[start..<end])
     }
- 
-    
+
     /// Returns true if all of the values in the array pass the predicate test. Stop traversing the list once a true-ful value found.
     ///
     /// - Parameter predicate: The function invoked per iteration.
     /// - Returns: Boolean
-    func some(predicate: (Element) -> Bool) -> Bool{
-        for elem in self{
-            if predicate(elem){
+    func some(predicate: (Element) -> Bool) -> Bool {
+        for elem in self {
+            if predicate(elem) {
                 return true
             }
         }
         return false
     }
-    
 
     /// Returns a shuffled copy of the array, using a version of the Fisher-Yates shuffle.
     ///
     /// - Returns: Returns the new shuffled array.
-    func shuffled() -> [Element]{
+    func shuffled() -> [Element] {
         var newArray = Array(self)
         newArray.shuffle()
         return newArray
     }
 
-
     /// Shuffle the elements of the collection in place.
-    mutating func shuffle(){
-        for index in 0..<self.count{
+    mutating func shuffle() {
+        for index in 0..<self.count {
             let randIndex = Int(arc4random_uniform(UInt32(self.count - 1)))
             if index != randIndex { Swift.swap(&self[index], &self[randIndex]) }
         }
@@ -195,20 +191,20 @@ public extension Array{
     ///   - arrays: The arrays to inspect.
     ///   - comparator: The comparator invoked per element.
     /// - Returns: Returns the new array of values.
-    static func xorWith(arrays:[Element]..., comparator:(Element,Element)->Bool) -> [Element] {
+    static func xorWith(arrays: [Element]..., comparator: (Element, Element) -> Bool) -> [Element] {
         return _baseXor(arrays: arrays, isXorBy:false, comparator:comparator)
     }
 }
 
-//MARK: Element: Equatable
-public extension Array where Element: Equatable{
+// MARK: Element: Equatable
+public extension Array where Element: Equatable {
 
     /// Creates an array of unique array values not included in the other provided arrays.
     ///
     /// - parameter values: The values to exclude.
     ///
     /// - returns: Returns the new array of filtered values.
-    func difference(_ values: [Element]) -> [Element]{
+    func difference(_ values: [Element]) -> [Element] {
         return self._baseDifference(with: values, comparator: ==)
     }
 
@@ -218,7 +214,7 @@ public extension Array where Element: Equatable{
     /// - parameter iteratee: The iteratee invoked per element.
     ///
     /// - returns: Returns the new array of filtered values.
-    func differenceBy(_ values: [Element],iteratee: @escaping ((Element) -> Element)) -> [Element]{
+    func differenceBy(_ values: [Element], iteratee: @escaping ((Element) -> Element)) -> [Element] {
         return self._baseDifference(with: values, comparator: ==, iteratee: iteratee)
     }
 
@@ -227,10 +223,9 @@ public extension Array where Element: Equatable{
     /// - parameter arrays: The arrays to inspect.
     ///
     /// - returns: Returns the new array of shared values.
-    func intersection(_ arrays: [Element]...) -> [Element]{
+    func intersection(_ arrays: [Element]...) -> [Element] {
         return self._baseIntersection(arrays: arrays, comparator: ==)
     }
-
 
     ///  This method is like .intersection except that it accepts iteratee which is invoked for each element of each arrays to generate the criterion by which uniqueness is computed.
     ///
@@ -238,16 +233,15 @@ public extension Array where Element: Equatable{
     /// - parameter iteratee: The iteratee invoked per element.
     ///
     /// - returns: Returns the new array of shared values.
-    func intersectionBy(_ arrays: [Element]...,iteratee: @escaping (Element) -> Element) -> [Element]{
+    func intersectionBy(_ arrays: [Element]..., iteratee: @escaping (Element) -> Element) -> [Element] {
         return self._baseIntersection(arrays: arrays, comparator: ==, iteratee: iteratee)
     }
-    
-    
+
     /// Creates an array excluding all given values using == comparator
     ///
     /// - Parameter values: The values to exclude.
     /// - Returns: Returns the new array of filtered values.
-    func without(_ values: Element...) -> [Element]{
+    func without(_ values: Element...) -> [Element] {
         return _baseDifference(with: values, comparator: ==)
     }
 
@@ -255,34 +249,33 @@ public extension Array where Element: Equatable{
     ///
     /// - Parameter arrays: The arrays to inspect.
     /// - Returns: Returns the new array of values.
-    static func xor(arrays: [Element]...) -> [Element]{
+    static func xor(arrays: [Element]...) -> [Element] {
         return _baseXor(arrays: arrays, isXorBy: false, comparator: ==, iteratee: nil)
     }
-    
+
     /// This method is like .xor except that it accepts iteratee which is invoked for each element of each arrays to generate the criterion by which uniqueness is computed.
     ///
     /// - Parameters:
     ///   - arrays: The arrays to inspect.
     ///   - iteratee: The iteratee invoked per element.
     /// - Returns: Returns the new array of values.
-    static func xorBy(arrays:[Element]..., iteratee: @escaping ((Element)->Element)) -> [Element]{
+    static func xorBy(arrays: [Element]..., iteratee: @escaping ((Element) -> Element)) -> [Element] {
         return _baseXor(arrays: arrays, isXorBy: true, comparator: ==, iteratee: iteratee)
     }
 }
 
-
-//MARK: fileprivate helper methods
-fileprivate extension Array{
+// MARK: fileprivate helper methods
+fileprivate extension Array {
     func _baseDifference(with values: [Element],
                          comparator: (Element, Element) -> Bool,
-                         iteratee: ((Element) -> Element)? = nil) -> [Element]{
+                         iteratee: ((Element) -> Element)? = nil) -> [Element] {
         var result = [Element]()
-        for elem1 in self{
+        for elem1 in self {
             var isUnique = true
             let val1 = iteratee != nil ? iteratee!(elem1) : elem1
-            for elem2 in values{
+            for elem2 in values {
                 let val2 = iteratee != nil ? iteratee!(elem2) : elem2
-                if comparator(val1, val2){
+                if comparator(val1, val2) {
                     isUnique = false
                     break
                 }
@@ -294,7 +287,7 @@ fileprivate extension Array{
 
     func _baseWhile(predicate: ((Element) -> Bool),
                     isDrop: Bool = false,
-                    fromRight: Bool = false) -> [Element]{
+                    fromRight: Bool = false) -> [Element] {
         let length = self.count
         var index = fromRight ? length : -1
 
@@ -306,12 +299,12 @@ fileprivate extension Array{
     }
 
     func _baseFindIndex(predicate: ((Element) -> Bool),
-                        fromRight: Bool = false) -> Int?{
+                        fromRight: Bool = false) -> Int? {
         let length = self.count
 
         let strideRange = fromRight ? stride(from: length - 1, to: 0, by: -1) : stride(from: 0, to: length - 1, by: 1)
 
-        for i in strideRange{
+        for i in strideRange {
             if predicate(self[i]) { return i }
         }
 
@@ -319,16 +312,16 @@ fileprivate extension Array{
     }
 
     func _baseIntersection(arrays: [[Element]],
-                            comparator : (Element, Element) -> Bool,
-                            iteratee: ((Element) -> Element)? = nil) -> [Element]{
+                            comparator: (Element, Element) -> Bool,
+                            iteratee: ((Element) -> Element)? = nil) -> [Element] {
         var result = self
 
-        for i in 0..<arrays.count{
+        for i in 0..<arrays.count {
             var tmp = [Element]()
-            for elem1 in result{
+            for elem1 in result {
                 var isCommonElem = false
                 let val1 = iteratee != nil ? iteratee!(elem1) : elem1
-                for elem2 in arrays[i]{
+                for elem2 in arrays[i] {
                     let val2 = iteratee != nil ? iteratee!(elem2) : elem2
                     if comparator(val1, val2) {
                         isCommonElem = true
@@ -340,23 +333,22 @@ fileprivate extension Array{
                 }
             }
             result = tmp
-            if result.count == 0 {break}
+            if result.isEmpty {break}
         }
         return result
     }
-    
-    static func _baseXor<T>(arrays:[[T]], isXorBy:Bool, comparator:(T,T)->Bool, iteratee:((T)->T)?=nil) -> [T] {
-        guard arrays.count > 0 else {return []}
+
+    static func _baseXor<T>(arrays: [[T]], isXorBy: Bool, comparator: (T, T) -> Bool, iteratee: ((T)->T)?=nil) -> [T] {
+        guard !arrays.isEmpty else {return []}
         guard arrays.count > 1 else {return arrays[0]}
-        
+
         var result = arrays[arrays.count-1]
-        
+
         for i in (0...arrays.count-2).reversed() {
             let nextArr = arrays[i]
-            print(nextArr)
             var tmp = [T]()
             var uniqueElemMarker = [Bool](repeating: true, count: result.count)
-            
+
             for elem1 in nextArr {
                 var isUnique = true
                 for j in 0..<result.count {
@@ -372,31 +364,28 @@ fileprivate extension Array{
                             }
                         }
                     }
-                    
+
                     if comparator(elem1, elem2) {
                         isUnique = false
                         uniqueElemMarker[j] = false
                         break
                     }
                 }
-                
+
                 if isUnique {
                     tmp.append(elem1)
                 }
             }
-            
+
             for i in 0..<result.count {
                 if uniqueElemMarker[i] {
                     tmp.append(result[i])
                 }
             }
-            
+
             result = tmp
         }
-        
+
         return result
     }
 }
-
-
-
