@@ -10,13 +10,13 @@ import Foundation
 
 internal extension CountableRange {
 
-    func each(callback: (Bound) -> ()) {
+    func each(callback: (Bound) -> Void) {
         for i in self {
             callback(i)
         }
     }
 
-    func each(callback: () -> ()) {
+    func each(callback: () -> Void) {
         for _ in self {
             callback()
         }
@@ -32,13 +32,13 @@ internal extension CountableRange {
 }
 
 internal extension CountableClosedRange {
-    func each(callback: (Bound) -> ()) {
+    func each(callback: (Bound) -> Void) {
         for i in self {
             callback(i)
         }
     }
 
-    func each(callback: () -> ()) {
+    func each(callback: () -> Void) {
         for _ in self {
             callback()
         }

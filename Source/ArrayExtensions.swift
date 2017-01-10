@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  ArrayExtensions.swift
 //  Swiftly
 //
 //  Created by Khoi Lai on 26/09/2016.
@@ -333,18 +333,18 @@ fileprivate extension Array {
                 }
             }
             result = tmp
-            if result.isEmpty {break}
+            if result.isEmpty { break }
         }
         return result
     }
 
-    static func _baseXor<T>(arrays: [[T]], isXorBy: Bool, comparator: (T, T) -> Bool, iteratee: ((T)->T)?=nil) -> [T] {
-        guard !arrays.isEmpty else {return []}
-        guard arrays.count > 1 else {return arrays[0]}
+    static func _baseXor<T>(arrays: [[T]], isXorBy: Bool, comparator: (T, T) -> Bool, iteratee: ((T) -> T)?=nil) -> [T] {
+        guard !arrays.isEmpty else { return [] }
+        guard arrays.count > 1 else { return arrays[0] }
 
-        var result = arrays[arrays.count-1]
+        var result = arrays[arrays.count - 1]
 
-        for i in (0...arrays.count-2).reversed() {
+        for i in (0...arrays.count - 2).reversed() {
             let nextArr = arrays[i]
             var tmp = [T]()
             var uniqueElemMarker = [Bool](repeating: true, count: result.count)
