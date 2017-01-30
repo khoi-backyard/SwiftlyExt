@@ -1,6 +1,12 @@
 # Change Log
 `SwiftlyExt` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.3](https://github.com/khoiln/SwiftlyExt/releases/tag/1.0.3)
+
+Added Swiftly struct for public static methods
+Added Array .random, .sample, .sampleSize
+Added String .between, .count, .initials, .isEmail, .hasNumbers, .hasLetters, .isAlpha, .isAlphaNumeric
+
 ## [1.0.2](https://github.com/khoiln/SwiftlyExt/releases/tag/1.0.2)
 
 Added Array .without, .shuffle, .shuffled

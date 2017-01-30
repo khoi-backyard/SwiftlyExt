@@ -30,4 +30,5 @@ class SwiftlyTests: XCTestCase {
         XCTAssert(Swiftly.random(lower: 2, upper: 2) == 2, "Return the same number if lower == upper")
     }
     
+    
 }

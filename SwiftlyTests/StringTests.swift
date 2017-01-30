@@ -15,6 +15,30 @@ class StringTests: XCTestCase {
     override func setUp() {
         super.setUp()
     }
+    
+    func testInitials(){
+        XCTAssert("John Doe".initials == "JD")
+        XCTAssert("John With Middle Name Doe".initials == "JWMND")
+    }
+    
+    func testIsEmail(){
+        XCTAssertTrue("swift@swiftly.com".isEmail)
+        XCTAssertFalse("swift@@swiftly.com".isEmail)
+    }
+    
+    func testCount(){
+        XCTAssert("Swiftlylylyly ly".count("as") == 0)
+        XCTAssert("Swiftlylylyly ly".count("ly") == 5)
+    }
+    
+    func testBetween(){
+        XCTAssert("<a>foo</a>".between("<a>", "</a>") == "foo")
+        XCTAssert("<a><a>foo</a></a>".between("<a>", "</a>") == "<a>foo</a>")
+        XCTAssert("<a>foo".between("<a>", "</a>") == nil)
+        XCTAssert("Some strings } are very {weird}, dont you think?".between("{", "}") == "weird")
+        XCTAssert("<a></a>".between("<a>", "</a>") ==  nil)
+        XCTAssert("<a>foo</a>".between("<a>", "<a>") ==  nil)
+    }
 
     func testDate() {
         guard let date = "01/01/1970 00:34:22".date(format: dateFormatString) else {
@@ -64,5 +88,31 @@ class StringTests: XCTestCase {
 
     func testURLDecoded() {
         XCTAssert("https%3A%2F%2Fgithub.com%2Fkhoiln%2FSwiftlyEXT".urlDecoded == "https://github.com/khoiln/SwiftlyEXT")
+    }
+    
+    func testHasNumbers(){
+        XCTAssertTrue("hoho2".hasNumbers)
+        XCTAssertFalse("swiftly".hasNumbers)
+    }
+    
+    func testHasLetters(){
+        XCTAssertFalse("12389723".hasLetters)
+        XCTAssertTrue("3749347a98423".hasLetters)
+        XCTAssertFalse("!@#$%^&*()🐶".hasLetters)
+    }
+    
+    func testIsAlpha(){
+        XCTAssertFalse("fdafaf3".isAlpha)
+        XCTAssert("afaf".isAlpha)
+        XCTAssertFalse("dfda@#(*&@#dfd".isAlpha)
+    }
+    
+    func testIsAlphaNumeric() {
+        XCTAssert("afaf35353afaf".isAlphaNumeric)
+        XCTAssert("FFFF99fff".isAlphaNumeric)
+        XCTAssert("99".isAlphaNumeric)
+        XCTAssert("afff".isAlphaNumeric)
+        XCTAssertFalse("-33".isAlphaNumeric)
+        XCTAssertFalse("aaff..".isAlphaNumeric)
     }
 }
