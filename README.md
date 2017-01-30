@@ -71,43 +71,18 @@ github "khoiln/SwiftlyExt" ~> 1.0
 
 Run `carthage update` to build the framework and drag the built `SwiftlyExt.framework` into your Xcode project.
 
-### Manually
+### Swift Package Manager
 
-If you prefer not to use either of the aforementioned dependency managers, you can integrate SwiftlyExt into your project manually.
+Adding SwiftlyExt as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift` file.
 
-#### Embedded Framework
-
-- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
-
-```bash
-$ git init
+```swift
+dependencies: [
+    .Package(url: "https://github.com/khoiln/SwiftlyExt.git", majorVersion: 1)
+]
 ```
 
-- Add SwiftlyExt as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+Note that the [Swift Package Manager](https://swift.org/package-manager/) is still in early design and development, but SwiftlyExt does support its use on supported platforms.
 
-```bash
-$ git submodule add https://github.com/khoiln/SwiftlyExt.git
-```
-
-- Open the new `SwiftlyExt` folder, and drag the `SwiftlyExt.xcodeproj` into the Project Navigator of your application's Xcode project.
-
-    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
-
-- Select the `SwiftlyExt.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `SwiftlyExt.xcodeproj` folders each with two different versions of the `SwiftlyExt.framework` nested inside a `Products` folder.
-
-    > It does not matter which `Products` folder you choose from, but it does matter whether you choose the top or bottom `SwiftlyExt.framework`.
-
-- Select the top `SwiftlyExt.framework` for iOS and the bottom one for OS X.
-
-    > You can verify which one you selected by inspecting the build log for your project. The build target for `SwiftlyExt` will be listed as either `SwiftlyExt iOS`, `SwiftlyExt macOS`, `SwiftlyExt tvOS` or `SwiftlyExt watchOS`.
-
-- And that's it!
-
-> The `SwiftlyExt.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
 ---
 
