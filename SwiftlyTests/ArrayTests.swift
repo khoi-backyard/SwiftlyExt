@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftlyExt
 
 class ArrayTests: XCTestCase {
 
@@ -190,7 +191,34 @@ class ArrayTests: XCTestCase {
         let shuffled = oneToTwentys.shuffled()
         XCTAssert(shuffled != oneToTwentys, "does change the order") // Chance of false negative: 1 in ~2.4*10^18
         XCTAssert(oneToTwentys == shuffled.sorted(), "Same number of elements and value after sorted")
-
+    }
+    
+    func testRandomAndSample() {
+        let a = [0, 1]
+        (0...100).forEach { _ in
+            let rand = a.random()
+            let sample = a.sample()
+            XCTAssert(a.some { $0 == rand }, "Must be either 0 or 1")
+            XCTAssert(a.some { $0 == sample }, "Same goes for sample")
+        }
+        
+        
+    }
+    
+    func testsampleSize() {
+        let a = [0,1,2,3,4,5]
+        
+        XCTAssert(a.sampleSize() == [], "Default must be zero")
+        XCTAssert(a.sampleSize(0) == [], "passing 0 should works too")
+        XCTAssert(a.sampleSize(-10) == [], "Negative size works")
+        
+        (0...10).forEach{ _ in
+            let numberOfElement = Swiftly.random(lower: 0, upper: a.count - 1)
+            XCTAssert(a.sampleSize(numberOfElement).every{ aSample in
+                return a.some {$0 == aSample}
+            }, "Taking samples should work")
+        }
+        
     }
 }
 

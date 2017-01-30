@@ -27,6 +27,10 @@
 		7C4B8DAE1E3F284E00004E9A /* SwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */; };
 		7C4B8DAF1E3F285F00004E9A /* SwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */; };
 		7C4B8DB01E3F286200004E9A /* SwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */; };
+		7C4B8DB21E3F28FE00004E9A /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DB11E3F28FE00004E9A /* Swiftly.swift */; };
+		7C4B8DB31E3F28FE00004E9A /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DB11E3F28FE00004E9A /* Swiftly.swift */; };
+		7C4B8DB41E3F28FE00004E9A /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DB11E3F28FE00004E9A /* Swiftly.swift */; };
+		7C4B8DB51E3F28FE00004E9A /* Swiftly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DB11E3F28FE00004E9A /* Swiftly.swift */; };
 		7C4EFA0A1E16469200DC9B08 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA091E16469200DC9B08 /* CGPointExtensions.swift */; };
 		7C4EFA0C1E1648AC00DC9B08 /* CGPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */; };
 		7C4EFA0D1E1648AC00DC9B08 /* CGPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */; };
@@ -103,6 +107,7 @@
 		7C14D21A1DA8E4DD00204587 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		7C14D21F1DA8E99800204587 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftlyTests.swift; sourceTree = "<group>"; };
+		7C4B8DB11E3F28FE00004E9A /* Swiftly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiftly.swift; sourceTree = "<group>"; };
 		7C4EFA091E16469200DC9B08 /* CGPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
 		7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointTests.swift; sourceTree = "<group>"; };
 		7C4EFA131E164A7700DC9B08 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
@@ -227,6 +232,7 @@
 				7C4EFA091E16469200DC9B08 /* CGPointExtensions.swift */,
 				7C4EFA131E164A7700DC9B08 /* CGFloatExtensions.swift */,
 				7C4EFA1C1E164D3A00DC9B08 /* DictionaryExtensions.swift */,
+				7C4B8DB11E3F28FE00004E9A /* Swiftly.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B8DB31E3F28FE00004E9A /* Swiftly.swift in Sources */,
 				7C135F7C1D99658B00994840 /* ArrayExtensions.swift in Sources */,
 				7C4EFA1E1E164D6B00DC9B08 /* DictionaryExtensions.swift in Sources */,
 				7C135F7A1D99658B00994840 /* IntExtensions.swift in Sources */,
@@ -641,6 +648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B8DB51E3F28FE00004E9A /* Swiftly.swift in Sources */,
 				7CB10D9D1D9961A400731EE9 /* ArrayExtensions.swift in Sources */,
 				7C4EFA201E164D6C00DC9B08 /* DictionaryExtensions.swift in Sources */,
 				7CB10D9B1D9961A400731EE9 /* IntExtensions.swift in Sources */,
@@ -656,6 +664,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B8DB41E3F28FE00004E9A /* Swiftly.swift in Sources */,
 				7CB10DAE1D99627D00731EE9 /* ArrayExtensions.swift in Sources */,
 				7C4EFA1F1E164D6C00DC9B08 /* DictionaryExtensions.swift in Sources */,
 				7CB10DAC1D99627D00731EE9 /* IntExtensions.swift in Sources */,
@@ -671,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B8DB21E3F28FE00004E9A /* Swiftly.swift in Sources */,
 				7CB10D881D99344700731EE9 /* ArrayExtensions.swift in Sources */,
 				7C4EFA1D1E164D3A00DC9B08 /* DictionaryExtensions.swift in Sources */,
 				7CD99CE51D901C3800668467 /* IntExtensions.swift in Sources */,

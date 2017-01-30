@@ -87,8 +87,8 @@ public extension Array {
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the new sliced array.
-    func dropRightWhile(predicate: (Element) -> Bool) -> [Element] {
-        return self._baseWhile(predicate: predicate, isDrop: true, fromRight: true)
+    func dropRightWhile(_ predicate: (Element) -> Bool) -> [Element] {
+        return self._baseWhile(predicate, isDrop: true, fromRight: true)
     }
 
     /// Creates a slice of array excluding elements dropped from the beginning. Elements are dropped until predicate returns false.
@@ -96,15 +96,15 @@ public extension Array {
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the new sliced array.
-    func dropWhile(predicate: (Element) -> Bool) -> [Element] {
-        return self._baseWhile(predicate: predicate, isDrop: true)
+    func dropWhile(_ predicate: (Element) -> Bool) -> [Element] {
+        return self._baseWhile(predicate, isDrop: true)
     }
 
     /// Returns true if all of the values in the array pass the predicate test. Stop traversing the list once a falsey value found.
     ///
     /// - Parameter predicate: The function invoked per iteration.
     /// - Returns: Boolean
-    func every(predicate: (Element) -> Bool) -> Bool {
+    func every(_ predicate: (Element) -> Bool) -> Bool {
         for elem in self {
             if !predicate(elem) {
                 return false
@@ -118,8 +118,8 @@ public extension Array {
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the index of the found element, else nil.
-    func findIndex(predicate: (Element) -> Bool) -> Int? {
-        return _baseFindIndex(predicate: predicate)
+    func findIndex(_ predicate: (Element) -> Bool) -> Int? {
+        return _baseFindIndex(predicate)
     }
 
     /// This method is like .findIndex except it iterates over the elements of array from right to left.
@@ -127,8 +127,8 @@ public extension Array {
     /// - parameter predicate: The function invoked per iteration.
     ///
     /// - returns: Returns the index of the found element, else nil.
-    func findLastIndex(predicate: (Element) -> Bool) -> Int? {
-        return _baseFindIndex(predicate: predicate, fromRight: true)
+    func findLastIndex(_ predicate: (Element) -> Bool) -> Int? {
+        return _baseFindIndex(predicate, fromRight: true)
     }
 
     /// This method is like .intersection except that it accepts comparator which is invoked to compare elements of arrays.
@@ -140,7 +140,6 @@ public extension Array {
     func intersectionWith(_ arrays: [Element]..., comparator: (Element, Element) -> Bool) -> [Element] {
         return self._baseIntersection(arrays: arrays, comparator: comparator)
     }
-
     /// Return an array by slicing from start up to, but not including, end.
     ///
     /// - parameter start: The start position.
@@ -159,7 +158,7 @@ public extension Array {
     ///
     /// - Parameter predicate: The function invoked per iteration.
     /// - Returns: Boolean
-    func some(predicate: (Element) -> Bool) -> Bool {
+    func some(_ predicate: (Element) -> Bool) -> Bool {
         for elem in self {
             if predicate(elem) {
                 return true
@@ -245,6 +244,30 @@ public extension Array where Element: Equatable {
         return _baseDifference(with: values, comparator: ==)
     }
 
+    /// Alias of .sample
+    ///
+    /// - Returns: A random element
+    func random() -> Element {
+        return sample()
+    }
+
+    /// Return a random value from the array
+    ///
+    /// - Returns: A random value
+    func sample() -> Element {
+        return self[Swiftly.random(lower: 0, upper: count - 1)]
+    }
+
+    /// Gets n random elements from collection.
+    /// Using [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
+    ///
+    /// - Parameter n: The number of elements to sample. 0 by default.
+    /// - Returns: Array of random elements
+    func sampleSize(_ n: Int = 0) -> [Element] {
+        let number = Swift.max(0, Swift.min(n, count))
+        return shuffled().slice(start: 0, end: number)
+    }
+
     /// Creates an array of unique values that is the symmetric difference of the provided arrays.
     ///
     /// - Parameter arrays: The arrays to inspect.
@@ -285,7 +308,7 @@ fileprivate extension Array {
         return result
     }
 
-    func _baseWhile(predicate: ((Element) -> Bool),
+    func _baseWhile(_ predicate: ((Element) -> Bool),
                     isDrop: Bool = false,
                     fromRight: Bool = false) -> [Element] {
         let length = self.count
@@ -298,7 +321,7 @@ fileprivate extension Array {
         return isDrop ? self.slice(start: fromRight ? 0 : index, end: fromRight ? index + 1 : length) : self.slice(start: fromRight ? index + 1 : 0, end: fromRight ? length : index)
     }
 
-    func _baseFindIndex(predicate: ((Element) -> Bool),
+    func _baseFindIndex(_ predicate: ((Element) -> Bool),
                         fromRight: Bool = false) -> Int? {
         let length = self.count
 

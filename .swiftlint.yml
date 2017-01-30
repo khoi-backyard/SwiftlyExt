@@ -17,5 +17,6 @@ opt_in_rules:
   - switch_case_on_newline
 disabled_rules:
   - variable_name
+  - file_length
 line_length: 200
 

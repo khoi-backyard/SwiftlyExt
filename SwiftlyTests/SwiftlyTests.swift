@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftlyExt
 
 class SwiftlyTests: XCTestCase {
     
@@ -20,16 +21,13 @@ class SwiftlyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testRandom(){
+        (0...100).forEach { _ in
+            let random = Swiftly.random(lower: 0, upper: 1)
+            XCTAssert( [0,1].some{ $0 == random } , "Should return number 0 or 1")
         }
+        
+        XCTAssert(Swiftly.random(lower: 2, upper: 2) == 2, "Return the same number if lower == upper")
     }
     
 }
