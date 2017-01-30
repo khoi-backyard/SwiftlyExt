@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		7C21FF651D91375E00BB0B36 /* Cleanup Whitespace */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 7C21FF661D91375F00BB0B36 /* Build configuration list for PBXAggregateTarget "Cleanup Whitespace" */;
-			buildPhases = (
-				7C21FF691D91376900BB0B36 /* Cleanup Whitespace */,
-			);
-			dependencies = (
-			);
-			name = "Cleanup Whitespace";
-			productName = "Cleanup Whitespace";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		7C135F641D99637800994840 /* SwiftlyExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB10DA31D99621700731EE9 /* SwiftlyExt.framework */; };
 		7C135F6A1D9963D500994840 /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB10D891D995EF300731EE9 /* ArrayTests.swift */; };
@@ -38,6 +24,9 @@
 		7C14D2201DA8E99800204587 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14D21F1DA8E99800204587 /* DateTests.swift */; };
 		7C14D2211DA8E99E00204587 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14D21F1DA8E99800204587 /* DateTests.swift */; };
 		7C14D2221DA8E99F00204587 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14D21F1DA8E99800204587 /* DateTests.swift */; };
+		7C4B8DAE1E3F284E00004E9A /* SwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */; };
+		7C4B8DAF1E3F285F00004E9A /* SwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */; };
+		7C4B8DB01E3F286200004E9A /* SwiftlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */; };
 		7C4EFA0A1E16469200DC9B08 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA091E16469200DC9B08 /* CGPointExtensions.swift */; };
 		7C4EFA0C1E1648AC00DC9B08 /* CGPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */; };
 		7C4EFA0D1E1648AC00DC9B08 /* CGPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */; };
@@ -113,6 +102,7 @@
 		7C135F901D99660E00994840 /* SwiftlyExt macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftlyExt macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C14D21A1DA8E4DD00204587 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		7C14D21F1DA8E99800204587 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftlyTests.swift; sourceTree = "<group>"; };
 		7C4EFA091E16469200DC9B08 /* CGPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
 		7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointTests.swift; sourceTree = "<group>"; };
 		7C4EFA131E164A7700DC9B08 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
@@ -252,6 +242,7 @@
 				7C4EFA0B1E1648AC00DC9B08 /* CGPointTests.swift */,
 				7C4EFA181E164C1700DC9B08 /* CGFloatTests.swift */,
 				7C4EFA211E164D9A00DC9B08 /* DictionaryTests.swift */,
+				7C4B8DAD1E3F284E00004E9A /* SwiftlyTests.swift */,
 			);
 			path = SwiftlyTests;
 			sourceTree = "<group>";
@@ -447,11 +438,6 @@
 						DevelopmentTeam = 7G5K6NH4YV;
 						ProvisioningStyle = Automatic;
 					};
-					7C21FF651D91375E00BB0B36 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 7G5K6NH4YV;
-						ProvisioningStyle = Automatic;
-					};
 					7CB10D911D99613C00731EE9 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -490,7 +476,6 @@
 				7CB10DA21D99621700731EE9 /* SwiftlyExt tvOS */,
 				7C135F5E1D99637800994840 /* SwiftlyExt tvOS Tests */,
 				7CB10D911D99613C00731EE9 /* SwiftlyExt watchOS */,
-				7C21FF651D91375E00BB0B36 /* Cleanup Whitespace */,
 			);
 		};
 /* End PBXProject section */
@@ -548,20 +533,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C21FF691D91376900BB0B36 /* Cleanup Whitespace */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Cleanup Whitespace";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\ndirectories=(Source SwiftlyTests)\n\nfor directory in \"${directories[@]}\"\ndo\necho \"Cleaning whitespace in directory: $directory\"\nfind $directory -iregex '.*\\.swift' -exec sed -E -i '' -e 's/[[:blank:]]*$//' {} \\;\ndone\n";
-		};
 		7CA7C87C1E24E7EF00EA2F6A /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,6 +598,7 @@
 			files = (
 				7C135F6A1D9963D500994840 /* ArrayTests.swift in Sources */,
 				7C14D2221DA8E99F00204587 /* DateTests.swift in Sources */,
+				7C4B8DAF1E3F285F00004E9A /* SwiftlyTests.swift in Sources */,
 				7C4EFA241E164D9A00DC9B08 /* DictionaryTests.swift in Sources */,
 				7CF95F811DAB9FAF00C61E03 /* StringTests.swift in Sources */,
 				7C135F6B1D9963D700994840 /* IntTests.swift in Sources */,
@@ -656,6 +628,7 @@
 			files = (
 				7C135F9B1D99663800994840 /* ArrayTests.swift in Sources */,
 				7C14D2211DA8E99E00204587 /* DateTests.swift in Sources */,
+				7C4B8DB01E3F286200004E9A /* SwiftlyTests.swift in Sources */,
 				7C4EFA231E164D9A00DC9B08 /* DictionaryTests.swift in Sources */,
 				7CF95F801DAB9FAE00C61E03 /* StringTests.swift in Sources */,
 				7C135F9C1D99663C00994840 /* IntTests.swift in Sources */,
@@ -715,6 +688,7 @@
 			files = (
 				7CD99CED1D901F0300668467 /* IntTests.swift in Sources */,
 				7C14D2201DA8E99800204587 /* DateTests.swift in Sources */,
+				7C4B8DAE1E3F284E00004E9A /* SwiftlyTests.swift in Sources */,
 				7C4EFA221E164D9A00DC9B08 /* DictionaryTests.swift in Sources */,
 				7CF95F7C1DAB9EAE00C61E03 /* StringTests.swift in Sources */,
 				7CB10D8A1D995EF300731EE9 /* ArrayTests.swift in Sources */,
@@ -849,22 +823,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		7C21FF671D91375F00BB0B36 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 7G5K6NH4YV;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		7C21FF681D91375F00BB0B36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 7G5K6NH4YV;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -1152,15 +1110,6 @@
 			buildConfigurations = (
 				7C135F991D99660E00994840 /* Debug */,
 				7C135F9A1D99660E00994840 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7C21FF661D91375F00BB0B36 /* Build configuration list for PBXAggregateTarget "Cleanup Whitespace" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7C21FF671D91375F00BB0B36 /* Debug */,
-				7C21FF681D91375F00BB0B36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
