@@ -86,11 +86,8 @@ Note that the [Swift Package Manager](https://swift.org/package-manager/) is sti
 
 ---
 
-##FAQ
-
-###What is the purpose of the project?
-
-SwiftlyExt is a collection of useful extensions that we use daily for iOS, and macOS development. It helps us save a ton of time writing the same code over and over again. Hope SwiftyExt will helps you too.
+## How to contribute
+Any help or feedback is highly appreciated. Please refer to the [contributing guidelines](https://github.com/khoiln/SwiftlyExt/blob/master/CONTRIBUTING.md) for more information.
 
 ## License
 
