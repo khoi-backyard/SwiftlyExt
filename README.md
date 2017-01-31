@@ -96,6 +96,10 @@ We'll try to list some of the cool examples here.
 [😀,🤡,❤️,💋].sample() // => 💋
 // Return n random elements
 [😀,🤡,❤️,💋].sampleSize(2) // => [🤡, 💋]
+//Drop elements that passes the predicate from the beginning to end
+[1, 2, 3, 4, 5].dropWhile { $0 < 3 } // => [3, 4, 5]
+//And YES you can use method chaining too 👍
+[1, 2, 3, 4, 5].dropWhile { $0 < 3 }.some {$0 % 2 == 0} // => true
 //Check if all elements in the array passed the condition
 [0, 11, 28, 10].every { $0 % 2 == 0 } // => false
 //Check if one of the element passes the condition
