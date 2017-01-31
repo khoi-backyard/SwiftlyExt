@@ -228,6 +228,12 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual(test["odd"]!, [1,3,5], "SHould have odd group")
 
     }
+    
+    func testReject(){
+        XCTAssertEqual([1,2,3,4,5].reject{$0 % 2 == 0}, [1,3,5], "should return odd values")
+        XCTAssertEqual([1,2,3,4,5].reject{$0 % 2 != 0}, [2,4], "should return even values")
+
+    }
 }
 
 

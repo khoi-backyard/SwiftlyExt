@@ -269,6 +269,14 @@ public extension Array where Element: Equatable {
     }
     
     
+    /// The opposite of .filter; this method returns the elements of collection that predicate does not return true for.
+    ///
+    /// - Parameter predicate: The function invoked per iteration
+    /// - Returns: Returns the new filtered array.
+    func reject(_ predicate: (Element) -> Bool) -> [Element]{
+        return filter { !predicate($0) }
+    }
+    
     /// Create a dictionary where the key is a Hashable got by run iteratee through the element, and the value is the arrays of the elements responsible for getting that key
     ///
     /// - Parameter iteratee: The iteratee invoked per element.

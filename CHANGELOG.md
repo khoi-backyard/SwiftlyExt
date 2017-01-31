@@ -3,7 +3,7 @@
 
 ## [1.2.0](https://github.com/khoiln/SwiftlyExt/releases/tag/1.1.0)
 
-Added .groupBy
+Added .groupBy, .reject
 
 ## [1.1.0](https://github.com/khoiln/SwiftlyExt/releases/tag/1.1.0)
 
