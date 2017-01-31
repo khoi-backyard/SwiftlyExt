@@ -85,7 +85,7 @@ Note that the [Swift Package Manager](https://swift.org/package-manager/) is sti
 
 ## Usage
 
-There are many handy usages of `SwiftlyExt`, head over the [documentation](http://cocoadocs.org/docsets/SwiftlyExt/) for the comprehensive docs.
+There are many handy usages of `SwiftlyExt`, head over [CocoaDocs](http://cocoadocs.org/docsets/SwiftlyExt/) for the comprehensive documentation.
 
 We'll try to list some of the cool examples here.
 
