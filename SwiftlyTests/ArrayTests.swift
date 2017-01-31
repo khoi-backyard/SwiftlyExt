@@ -220,6 +220,14 @@ class ArrayTests: XCTestCase {
         }
         
     }
+    
+    func testGroupBy(){
+        let a = [1,2,3,4,5]
+        let test = a.groupBy { $0 % 2 == 0 ? "even" : "odd"}
+        XCTAssertEqual(test["even"]!, [2,4], "SHould have even group")
+        XCTAssertEqual(test["odd"]!, [1,3,5], "SHould have odd group")
+
+    }
 }
 
 

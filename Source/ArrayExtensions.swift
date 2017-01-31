@@ -267,6 +267,20 @@ public extension Array where Element: Equatable {
         let number = Swift.max(0, Swift.min(n, count))
         return shuffled().slice(start: 0, end: number)
     }
+    
+    
+    /// Create a dictionary where the key is a Hashable got by run iteratee through the element, and the value is the arrays of the elements responsible for getting that key
+    ///
+    /// - Parameter iteratee: The iteratee invoked per element.
+    /// - Returns: Returns the dictionary [Hashable: [Element]]
+    func groupBy<T: Hashable>(_ iteratee: (Element) -> T) -> [T: [Element]] {
+        var result = [T: [Element]]()
+        for elem in self {
+            let key = iteratee(elem)
+            result[key] == nil ? result[key] = [elem] : result[key]?.append(elem)
+        }
+        return result
+    }
 
     /// Creates an array of unique values that is the symmetric difference of the provided arrays.
     ///

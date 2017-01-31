@@ -1,6 +1,10 @@
 # Change Log
 `SwiftlyExt` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.0](https://github.com/khoiln/SwiftlyExt/releases/tag/1.1.0)
+
+Added .groupBy
+
 ## [1.1.0](https://github.com/khoiln/SwiftlyExt/releases/tag/1.1.0)
 
 Added Swiftly struct for public static methods
