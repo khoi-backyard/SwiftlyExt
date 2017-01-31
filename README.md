@@ -69,7 +69,7 @@ To integrate SwiftlyExt into your Xcode project using Carthage, specify it in yo
 github "khoiln/SwiftlyExt" ~> 1.1
 ```
 
-Run `carthage update` to build the framework and drag the built `SwiftlyExt.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built `SwiftlyExt.framework` into your Xcode project. U
 
 ### Swift Package Manager
 
@@ -83,8 +83,28 @@ dependencies: [
 
 Note that the [Swift Package Manager](https://swift.org/package-manager/) is still in early design and development, but SwiftlyExt does support its use on supported platforms.
 
+## Usage
 
----
+There are many handy usages of `SwiftlyExt`, head over the [documentation](http://cocoadocs.org/docsets/SwiftlyExt/) for the comprehensive docs.
+
+We'll try to list some of the cool examples here.
+
+### Array Extensions
+
+```swift
+// Return a random element
+[😀,🤡,❤️,💋].sample() // => 💋
+// Return n random elements
+[😀,🤡,❤️,💋].sampleSize(2) // => [🤡, 💋]
+//Check if all elements in the array passed the condition
+[0, 11, 28, 10].every { $0 % 2 == 0 } // => false
+//Check if one of the element passes the condition
+[0, 11, 28, 10].some { $0 % 2 != 0 } // => true
+//Find index of the last number which predicate return true for.
+[1, 2, 3, 4, 5].findLastIndex {$0 % 2 == 0} // => 3 
+//Group common elements from an array to a dictionary of [Hashable : [Element]]
+[1, 2, 3, 4, 5].groupBy { $0 % 2 == 0 ? "even" : "odd"} // => ["even": [2,4], "odd": [1,3,5]]
+```
 
 ## How to contribute
 Any help or feedback is highly appreciated. Please refer to the [contributing guidelines](https://github.com/khoiln/SwiftlyExt/blob/master/CONTRIBUTING.md) for more information.
