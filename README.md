@@ -111,4 +111,4 @@ Any help or feedback is highly appreciated. Please refer to the [contributing gu
 
 ## License
 
-SwiftyExt is released under the MIT license. See LICENSE for details.
+SwiftyExt is released under the MIT license. See [LICENSE](https://github.com/khoiln/SwiftlyExt/blob/master/LICENSE) for details.
