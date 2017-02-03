@@ -192,7 +192,7 @@ class ArrayTests: XCTestCase {
         XCTAssert(shuffled != oneToTwentys, "does change the order") // Chance of false negative: 1 in ~2.4*10^18
         XCTAssert(oneToTwentys == shuffled.sorted(), "Same number of elements and value after sorted")
     }
-    
+
     func testRandomAndSample() {
         let a = [0, 1]
         (0...100).forEach { _ in
@@ -201,26 +201,26 @@ class ArrayTests: XCTestCase {
             XCTAssert(a.some { $0 == rand }, "Must be either 0 or 1")
             XCTAssert(a.some { $0 == sample }, "Same goes for sample")
         }
-        
-        
+
+
     }
-    
+
     func testsampleSize() {
         let a = [0,1,2,3,4,5]
-        
+
         XCTAssert(a.sampleSize() == [], "Default must be zero")
         XCTAssert(a.sampleSize(0) == [], "passing 0 should works too")
         XCTAssert(a.sampleSize(-10) == [], "Negative size works")
-        
+
         (0...10).forEach{ _ in
             let numberOfElement = Swiftly.random(lower: 0, upper: a.count - 1)
             XCTAssert(a.sampleSize(numberOfElement).every{ aSample in
                 return a.some {$0 == aSample}
             }, "Taking samples should work")
         }
-        
+
     }
-    
+
     func testGroupBy(){
         let a = [1,2,3,4,5]
         let test = a.groupBy { $0 % 2 == 0 ? "even" : "odd"}
@@ -228,7 +228,7 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual(test["odd"]!, [1,3,5], "SHould have odd group")
 
     }
-    
+
     func testReject(){
         XCTAssertEqual([1,2,3,4,5].reject{$0 % 2 == 0}, [1,3,5], "should return odd values")
         XCTAssertEqual([1,2,3,4,5].reject{$0 % 2 != 0}, [2,4], "should return even values")

@@ -2,5 +2,5 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftlyExt",
-    exclude: ["SwiftlyTests"]
+    exclude: ["Tests"]
 )

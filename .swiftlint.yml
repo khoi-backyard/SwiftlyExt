@@ -1,7 +1,7 @@
 included:
   - Source
 excluded:
-  - SwiftlyTests
+  - Tests
 opt_in_rules:
   - attributes
   - empty_count
