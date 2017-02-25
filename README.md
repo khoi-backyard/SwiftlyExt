@@ -42,7 +42,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'SwiftlyExt', '~> 1.1'
+    pod 'SwiftlyExt', '~> 1.3'
 end
 ```
 
@@ -66,7 +66,7 @@ $ brew install carthage
 To integrate SwiftlyExt into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "khoiln/SwiftlyExt" ~> 1.1
+github "khoiln/SwiftlyExt" ~> 1.3
 ```
 
 Run `carthage update` to build the framework and drag the built `SwiftlyExt.framework` into your Xcode project. U

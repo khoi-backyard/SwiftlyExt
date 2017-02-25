@@ -140,6 +140,20 @@ public extension Array {
     func intersectionWith(_ arrays: [Element]..., comparator: (Element, Element) -> Bool) -> [Element] {
         return self._baseIntersection(arrays: arrays, comparator: comparator)
     }
+
+    /// Create a dictionary where the key is a Hashable got by run iteratee through the element, and the value is the arrays of the elements responsible for getting that key
+    ///
+    /// - Parameter iteratee: The iteratee invoked per element.
+    /// - Returns: Returns the dictionary [Hashable: [Element]]
+    func groupBy<T: Hashable>(_ iteratee: (Element) -> T) -> [T: [Element]] {
+        var result = [T: [Element]]()
+        for elem in self {
+            let key = iteratee(elem)
+            result[key] == nil ? result[key] = [elem] : result[key]?.append(elem)
+        }
+        return result
+    }
+
     /// Return an array by slicing from start up to, but not including, end.
     ///
     /// - parameter start: The start position.
@@ -276,19 +290,6 @@ public extension Array where Element: Equatable {
         return filter { !predicate($0) }
     }
 
-    /// Create a dictionary where the key is a Hashable got by run iteratee through the element, and the value is the arrays of the elements responsible for getting that key
-    ///
-    /// - Parameter iteratee: The iteratee invoked per element.
-    /// - Returns: Returns the dictionary [Hashable: [Element]]
-    func groupBy<T: Hashable>(_ iteratee: (Element) -> T) -> [T: [Element]] {
-        var result = [T: [Element]]()
-        for elem in self {
-            let key = iteratee(elem)
-            result[key] == nil ? result[key] = [elem] : result[key]?.append(elem)
-        }
-        return result
-    }
-
     /// Creates an array of unique values that is the symmetric difference of the provided arrays.
     ///
     /// - Parameter arrays: The arrays to inspect.
@@ -356,8 +357,8 @@ fileprivate extension Array {
     }
 
     func _baseIntersection(arrays: [[Element]],
-                            comparator: (Element, Element) -> Bool,
-                            iteratee: ((Element) -> Element)? = nil) -> [Element] {
+                           comparator: (Element, Element) -> Bool,
+                           iteratee: ((Element) -> Element)? = nil) -> [Element] {
         var result = self
 
         for i in 0..<arrays.count {

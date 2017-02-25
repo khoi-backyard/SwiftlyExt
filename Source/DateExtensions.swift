@@ -153,11 +153,11 @@ public extension Date {
 // MARK: Adding date
 public extension Date {
     fileprivate func _date(byAddingYears years: Int = 0,
-                          byAddingMonths months: Int = 0,
-                          byAddingDays days: Int = 0,
-                          byAddingHours hours: Int = 0,
-                          byAddingMinutes minutes: Int = 0,
-                          byAddingSeconds seconds: Int = 0) -> Date? {
+                           byAddingMonths months: Int = 0,
+                           byAddingDays days: Int = 0,
+                           byAddingHours hours: Int = 0,
+                           byAddingMinutes minutes: Int = 0,
+                           byAddingSeconds seconds: Int = 0) -> Date? {
         var dc = DateComponents()
         dc.year = years
         dc.month = months

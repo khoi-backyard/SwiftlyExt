@@ -1,7 +1,11 @@
 # Change Log
 `SwiftlyExt` adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.2.0](https://github.com/khoiln/SwiftlyExt/releases/tag/1.1.0)
+## [1.3.0](https://github.com/khoiln/SwiftlyExt/releases/tag/1.3.0)
+
+Remove Equatable on E of .groupBy
+
+## [1.2.0](https://github.com/khoiln/SwiftlyExt/releases/tag/1.2.0)
 
 Added .groupBy, .reject
 
