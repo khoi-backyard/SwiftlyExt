@@ -108,6 +108,25 @@ We'll try to list some of the cool examples here.
 // => 3 
 [1, 2, 3, 4, 5].groupBy { $0 % 2 == 0 ? "even" : "odd"} //Group common elements from an array to a dictionary of [Hashable : [Element]]
 // => ["even": [2,4], "odd": [1,3,5]]
+// Any many more....
+```
+
+### Date Extensions
+
+```swift
+let now = Date()
+let tmr = now.date(byAddingDays: 1)
+             .date(byAddingMinutes: 20) // You could also add year, month... and other time units
+
+now.isBefore(tmr) 
+// => true
+
+now?.toString(format: "dd/MM/yyyy HH:mm:ss") // Return the string representation for a date.
+// => "03/15/2017 14:34:22"
+
+tmr.year == 2017 // Access time unit properties
+tmr.hour == 14
+tmr.minute == 54
 ```
 
 ### String Extensions
@@ -129,6 +148,21 @@ We'll try to list some of the cool examples here.
 // => "Swiftly%09%0AString%0ATest"
 "https%3A%2F%2Fgithub.com%2Fkhoiln%2FSwiftlyEXT".urlDecoded // URL Decoded
 // => "https://github.com/khoiln/SwiftlyEXT"
+// Any many more....
+```
+
+### Int Extensions
+
+```swift
+1.upTo(3) { print($0) } 
+// print 1, 2, 3
+5.times { print("🐶") } // Run a block n times
+// print 🐶 5 times
+1234.digits() // Convert integer to array of digits
+// => [1,2,3,4]
+201.isIn(range: 200..<300) // Test whether a int is in a range
+// => true
+// And many more
 ```
 
 ## How to contribute
