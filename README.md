@@ -92,22 +92,43 @@ We'll try to list some of the cool examples here.
 ### Array Extensions
 
 ```swift
-// Return a random element
-[😀,🤡,❤️,💋].sample() // => 💋
-// Return n random elements
-[😀,🤡,❤️,💋].sampleSize(2) // => [🤡, 💋]
-//Drop elements that passes the predicate from the beginning to end
-[1, 2, 3, 4, 5].dropWhile { $0 < 3 } // => [3, 4, 5]
-//And YES you can use method chaining too 👍
-[1, 2, 3, 4, 5].dropWhile { $0 < 3 }.some {$0 % 2 == 0} // => true
-//Check if all elements in the array passed the condition
-[0, 11, 28, 10].every { $0 % 2 == 0 } // => false
-//Check if one of the element passes the condition
-[0, 11, 28, 10].some { $0 % 2 != 0 } // => true
-//Find index of the last number which predicate return true for.
-[1, 2, 3, 4, 5].findLastIndex {$0 % 2 == 0} // => 3 
-//Group common elements from an array to a dictionary of [Hashable : [Element]]
-[1, 2, 3, 4, 5].groupBy { $0 % 2 == 0 ? "even" : "odd"} // => ["even": [2,4], "odd": [1,3,5]]
+[😀,🤡,❤️,💋].sample() // Return a random element
+// => 💋
+[😀,🤡,❤️,💋].sampleSize(2) // Return n random elements
+// => [🤡, 💋]
+[1, 2, 3, 4, 5].dropWhile { $0 < 3 } //Drop elements that passes the predicate from the beginning to end
+// => [3, 4, 5]
+[1, 2, 3, 4, 5].dropWhile { $0 < 3 }.some {$0 % 2 == 0} //And YES you can use method chaining too 👍
+// => true
+[0, 11, 28, 10].every { $0 % 2 == 0 } //Check if all elements in the array passed the condition
+// => false
+[0, 11, 28, 10].some { $0 % 2 != 0 } //Check if one of the element passes the condition
+// => true
+[1, 2, 3, 4, 5].findLastIndex {$0 % 2 == 0} //Find index of the last number which predicate return true for.
+// => 3 
+[1, 2, 3, 4, 5].groupBy { $0 % 2 == 0 ? "even" : "odd"} //Group common elements from an array to a dictionary of [Hashable : [Element]]
+// => ["even": [2,4], "odd": [1,3,5]]
+```
+
+### String Extensions
+
+```swift
+"John Doe".initials // Return the initials of the String
+// => "JD"
+"swift@swiftly.com".isEmail // Email validation
+// => true
+"<p>💯</p>".between("<p>", "</p>") // Find the string between two string
+// => "💯" 
+"01/01/1970 00:34:22".date(format: "dd/MM/yyyy HH:mm:ss") // Return a date from current string
+// => Date("01/01/1970 00:34:22")
+"https://github.com/Swiftly".base64Encoded // Return base64encoded string
+// => "aHR0cHM6Ly9naXRodWIuY29tL1N3aWZ0bHk="
+"\n\n\n Swiftly    ".trimmed.reversed // Trim newline and spaces and reverse the string
+// => "yltfiwS"
+"Swiftly\t\nString\nTest".urlEncoded // URL Encoded
+// => "Swiftly%09%0AString%0ATest"
+"https%3A%2F%2Fgithub.com%2Fkhoiln%2FSwiftlyEXT".urlDecoded // URL Decoded
+// => "https://github.com/khoiln/SwiftlyEXT"
 ```
 
 ## How to contribute
